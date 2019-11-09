@@ -6,7 +6,4 @@
     <description>Illusion games libraries</description>
     <authors>Illusionmods</authors>
   </metadata>
-  <files>
-    <file src="lib\**" target="lib" />
-  </files>
 </package>
