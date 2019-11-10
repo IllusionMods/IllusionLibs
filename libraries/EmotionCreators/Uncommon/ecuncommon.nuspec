@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>illusionlibs.ecuncommon</id>
+    <id>IllusionLibs.EmotionCreators.Uncommon</id>
+    <version>2019.6.6</version>
     <title>Emotion Creators uncommon libraries</title>
-    <version>0.0.1</version>
-    <description>blank</description>
-    <authors>blank</authors>
+    <description>Emotion Creators uncommon libraries</description>
+    <authors>none</authors>
   </metadata>
 </package>

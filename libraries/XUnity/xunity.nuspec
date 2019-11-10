@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>illusionlibs.xunity.resourceredirector</id>
+    <id>IllusionLibs.XUnity.ResourceRedirector</id>
+    <version>4.6.4</version>
     <title>XUnity Resource Redirector</title>
-    <version>0.0.1</version>
-    <description>blank</description>
-    <authors>blank</authors>
+    <description>XUnity resource redirector</description>
+    <authors>gravydevsupreme</authors>
   </metadata>
 </package>
