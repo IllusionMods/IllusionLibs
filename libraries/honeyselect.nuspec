@@ -8,7 +8,7 @@
     <authors>none</authors>
   </metadata>
   <files>
-    <file src="HoneySelect" target="bin"/>
+    <file src="HoneySelect\*" target="bin\net35"/>
     <file src="install.ps1" target="tools"/>
   </files>
 </package>

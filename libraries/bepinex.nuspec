@@ -8,7 +8,8 @@
     <authors>bepis, horse</authors>
   </metadata>
   <files>
-    <file src="BepInEx" target="bin"/>
+    <file src="BepInEx\*" target="bin\net35"/>
+    <file src="BepInEx\*" target="bin\net46"/>
     <file src="install.ps1" target="tools"/>
   </files>
 </package>

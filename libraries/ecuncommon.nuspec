@@ -8,7 +8,7 @@
     <authors>none</authors>
   </metadata>
   <files>
-    <file src="ECUncommon" target="bin"/>
+    <file src="ECUncommon\*" target="bin\net46"/>
     <file src="install.ps1" target="tools"/>
   </files>
 </package>

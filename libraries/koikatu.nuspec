@@ -8,7 +8,7 @@
     <authors>none</authors>
   </metadata>
   <files>
-    <file src="Koikatu" target="bin"/>
+    <file src="Koikatu\*" target="bin\net35"/>
     <file src="install.ps1" target="tools"/>
   </files>
 </package>

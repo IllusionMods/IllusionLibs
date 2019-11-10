@@ -8,7 +8,8 @@
     <authors>gravydevsupreme</authors>
   </metadata>
   <files>
-    <file src="XUnity" target="bin"/>
+    <file src="XUnity\*" target="bin\net35"/>
+    <file src="XUnity\*" target="bin\net46"/>
     <file src="install.ps1" target="tools"/>
   </files>
 </package>
