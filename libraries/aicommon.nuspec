@@ -8,6 +8,7 @@
     <authors>none</authors>
   </metadata>
   <files>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="AICommon" target="bin"/>
+    <file src="install.ps1" target="tools"/>
   </files>
 </package>

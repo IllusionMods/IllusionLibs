@@ -8,6 +8,7 @@
     <authors>bepis, horse</authors>
   </metadata>
   <files>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="BepInEx" target="bin"/>
+    <file src="install.ps1" target="tools"/>
   </files>
 </package>
