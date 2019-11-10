@@ -2,8 +2,11 @@
 <package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>    
     <id>illusionmods.illusionlibs</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>Illusion games libraries</description>
     <authors>Illusionmods</authors>
   </metadata>
+  <files>
+    <file src="libraries\**" target="" />
+  </files>
 </package>
