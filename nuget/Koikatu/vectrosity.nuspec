@@ -4,7 +4,7 @@
     <id>illusionlibs.koikatu.vectrosity</id>
     <version>0.0.1</version>
     <description>Koikatu vectrosity libraries</description>
-    <authors></authors>
+    <authors>illusionlibs</authors>
   </metadata>
   <files>
     <file src="vectrosity\**" target="lib" />

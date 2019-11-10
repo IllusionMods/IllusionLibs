@@ -4,6 +4,6 @@
     <id>illusionlibs.bepinex</id>
     <version>0.0.1</version>
     <description>BepInEx for IllusionMods</description>
-    <authors></authors>
+    <authors>bepinex</authors>
   </metadata>
 </package>

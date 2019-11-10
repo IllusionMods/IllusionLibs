@@ -4,7 +4,7 @@
     <id>illusionlibs.koikatu.textmeshpro</id>
     <version>0.0.1</version>
     <description>Koikatu textmeshpro library</description>
-    <authors></authors>
+    <authors>illusionlibs</authors>
   </metadata>
   <files>
     <file src="textmeshpro\**" target="lib" />
