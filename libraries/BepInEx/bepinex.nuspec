@@ -7,4 +7,7 @@
     <description>Unity game patcher and plugin framework</description>
     <authors>bepis, horse</authors>
   </metadata>
+  <files>
+    <file src="..\install.ps1" target="tools"/>
+  </files>
 </package>
