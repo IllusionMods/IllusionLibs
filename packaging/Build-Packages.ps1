@@ -1,7 +1,7 @@
-gci -Path AIGirl -Filter *.nuspec | foreach { nuget pack $_.FullName -version "2019.11.8" -properties id=IllusionLibs.AIGirl.$($_.BaseName) }
-gci -Path EmotionCreators -Filter *.nuspec | foreach { nuget pack $_.FullName -version "2019.6.6" -properties id=IllusionLibs.EmotionCreators.$($_.BaseName) }
-gci -Path Koikatu -Filter *.nuspec | foreach { nuget pack $_.FullName -version "2019.4.27" -properties id=IllusionLibs.Koikatu.$($_.BaseName) }
-gci -Path PlayHome -Filter *.nuspec | foreach { nuget pack $_.FullName -version "2018.3.11" -properties id=IllusionLibs.PlayHome.$($_.BaseName) }
-gci -Path HoneySelect -Filter *.nuspec | foreach { nuget pack $_.FullName -version "2017.6.30" -properties id=IllusionLibs.HoneySelect.$($_.BaseName) }
-gci -Path XUnity -Filter *.nuspec | foreach { nuget pack $_.FullName -version "4.6.4" -properties id=IllusionLibs.XUnity.$($_.BaseName) }
-gci -Path BepInEx -Filter *.nuspec | foreach { nuget pack $_.FullName -version "5.0.0" -properties id=IllusionLibs.BepInEx.$($_.BaseName) }
+gci -Path AIGirl -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.AIGirl.$($_.BaseName);gameVersion=2019.11.8;unityVersion=2018.2.21.10560245" }
+gci -Path EmotionCreators -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.EmotionCreators.$($_.BaseName);gameVersion=2019.6.6;unityVersion=notset" }
+gci -Path Koikatu -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.Koikatu.$($_.BaseName);gameVersion=2019.4.27;unityVersion=5.6.2.10654012" }
+gci -Path PlayHome -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.PlayHome.$($_.BaseName);gameVersion=2018.3.11;unityVersion=5.5.5.14185958" }
+gci -Path HoneySelect -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect.$($_.BaseName);gameVersion=2017.6.30;unityVersion=notset" }
+gci -Path XUnity -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.XUnity.$($_.BaseName)" }
+gci -Path BepInEx -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.BepInEx.$($_.BaseName)" }

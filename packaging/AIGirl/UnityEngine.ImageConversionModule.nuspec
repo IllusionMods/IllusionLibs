@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>$unityVersion$</version>
     <description>Provides helper methods to convert images from and to PNG, JPEG or EXR formats</description>
     <authors>Unity</authors>
     <developmentDependency>true</developmentDependency>

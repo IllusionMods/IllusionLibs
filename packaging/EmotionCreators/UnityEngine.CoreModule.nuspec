@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>$unityVersion$</version>
     <description>Unity core libraries</description>
     <authors>Unity</authors>
     <developmentDependency>true</developmentDependency>

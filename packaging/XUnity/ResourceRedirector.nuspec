@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>4.6.4</version>
     <description>Allows modifying resources loaded through the Resources and AssetBundle API as they are being loaded by the game</description>
     <authors>gravydevsupreme</authors>
     <projectUrl>https://github.com/bbepis/XUnity.AutoTranslator</projectUrl>
