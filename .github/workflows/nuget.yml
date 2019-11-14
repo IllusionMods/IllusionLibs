@@ -11,7 +11,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       
-    - name: Pack nuget packages
+    - name: Setup nuget
+      uses: warrenbuckley/Setup-Nuget@v1
+      
+    - name: Nuget pack
       run: |
         cd packaging
         .\Build-Packages.ps1
