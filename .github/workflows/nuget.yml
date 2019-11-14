@@ -13,6 +13,6 @@ jobs:
       
     - name: Pack nuget packages
       run: |
-        echo %cd%
+        Get-Location
         cd packaging
-        echo %cd%
+        Get-Location
