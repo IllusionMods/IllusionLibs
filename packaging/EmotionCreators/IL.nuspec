@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <description>Illusion extension methods</description>
+    <authors>Illusion</authors>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="libraries\IL.dll" target="lib\net46"/>
+    <file src="..\install.ps1" target="tools"/>
+  </files>
+</package>
