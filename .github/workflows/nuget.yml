@@ -12,6 +12,4 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Pack nuget packages
-      run: |
-        cd packaging
-        Build-Packages.ps1
+      run: echo cd
