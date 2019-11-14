@@ -4,7 +4,7 @@
     <id>$id$</id>
     <version>$version$</version>
     <description>Sirenix serialization library</description>
-    <authors>Unity</authors>
+    <authors>Sirenix</authors>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
