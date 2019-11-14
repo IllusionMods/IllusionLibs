@@ -12,6 +12,6 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Pack nuget packages
-      working-directory: .\packaging
+      working-directory: ./packaging
       run: Build-Packages.ps1
       
