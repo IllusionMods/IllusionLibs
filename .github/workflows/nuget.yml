@@ -13,5 +13,5 @@ jobs:
       
     - name: Pack nuget packages
       working-directory: ./packaging
-      run: Build-Packages.ps1
+      run: packaging/Build-Packages.ps1
       
