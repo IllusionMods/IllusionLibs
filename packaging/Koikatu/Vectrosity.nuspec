@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$unityVersion$</version>
+    <version>$gameVersion$</version>
     <description>Line-drawing utility for Unity</description>
     <authors>Starscene Software</authors>
     <developmentDependency>true</developmentDependency>
