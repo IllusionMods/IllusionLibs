@@ -13,6 +13,5 @@ jobs:
       
     - name: Pack nuget packages
       run: |
-        Get-Location
         cd packaging
-        Get-Location
+        .\Build-Packages.ps1
