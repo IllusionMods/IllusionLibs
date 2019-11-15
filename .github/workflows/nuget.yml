@@ -18,3 +18,9 @@ jobs:
       run: |
         cd packaging
         .\Build-Packages.ps1
+      
+    - name: Nuget push
+      run: gci -path packaging -filter *.nupkg | foreach { nuget push -source $NUGET_SOURCE -apikey $NUGET_TOKEN $_.FullName }
+      env:
+        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+        NUGET_SOURCE: https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
