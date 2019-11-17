@@ -1,4 +1,4 @@
-name: Nuget
+name: Push to azure nuget feed
 
 on: [push]
 
@@ -20,4 +20,4 @@ jobs:
         .\Build-Packages.ps1
       
     - name: Nuget push
-      run: gci -path packaging -filter *.nupkg | foreach { nuget push $_.FullName -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json -apikey ${{ secrets.NUGET_TOKEN }} }
+      run: gci -path packaging -filter *.nupkg | foreach { nuget push $_.FullName ${{ secrets.NUGET_TOKEN }} -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json }
