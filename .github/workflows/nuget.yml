@@ -13,11 +13,13 @@ jobs:
       
     - name: Setup nuget
       uses: warrenbuckley/Setup-Nuget@v1
+    
+    - name: Setup Azure Artifacts Credential Provider
+      run: .\installcredprovider.ps1
       
     - name: Nuget pack
-      run: |
-        cd packaging
-        .\Build-Packages.ps1
+      working-directory: .\packaging
+      run: .\Build-Packages.ps1
       
     - name: Nuget push
       run: gci -path packaging -filter *.nupkg | foreach { nuget push $_.FullName ${{ secrets.NUGET_TOKEN }} -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json }
