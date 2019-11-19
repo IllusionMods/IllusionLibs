@@ -23,5 +23,5 @@ jobs:
       
     - name: Nuget push
       run: |
-        nuget sources add -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json -username "token" -password ${{ secrets.NUGET_TOKEN }}
+        nuget sources add -name "IllusionMods" -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json -username "token" -password ${{ secrets.NUGET_TOKEN }}
         nuget push **.nupkg -apikey key -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
