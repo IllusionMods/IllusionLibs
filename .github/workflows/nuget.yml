@@ -13,15 +13,15 @@ jobs:
       
     - name: Setup nuget
       uses: warrenbuckley/Setup-Nuget@v1
-    
-    - name: Setup Azure Artifacts Credential Provider
-      run: .\installcredprovider.ps1
       
     - name: Nuget pack
       working-directory: .\packaging
       run: .\Build-Packages.ps1
       
     - name: Nuget push
+      env:
+        NUGET_URL = https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
+        NUGET_TOKEN = ${{ secrets.NUGET_TOKEN }}
       run: |
-        nuget sources add -name "IllusionMods" -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json -username "token" -password ${{ secrets.NUGET_TOKEN }}
-        nuget push **.nupkg -apikey key -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
+        nuget sources add -name "IllusionMods" -src ${env:NUGET_URL} -username "token" -password ${env:NUGET_TOKEN}
+        nuget push **.nupkg -apikey key -noninteractive -skipduplicate -src ${env:NUGET_URL}
