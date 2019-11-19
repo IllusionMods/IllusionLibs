@@ -22,4 +22,6 @@ jobs:
       run: .\Build-Packages.ps1
       
     - name: Nuget push
-      run: gci -path packaging -filter *.nupkg | foreach { nuget push $_.FullName ${{ secrets.NUGET_TOKEN }} -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json }
+      run: |
+        nuget sources add -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json -username "token" -password ${{ secrets.NUGET_TOKEN }}
+        nuget push **.nupkg -apikey key -noninteractive -skipduplicate -src https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json
