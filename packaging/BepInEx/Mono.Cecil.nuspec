@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>0.10.4</version>
+    <description>Cecil is a library to inspect, modify and create .NET programs and libraries</description>
+    <authors>jbevain</authors>
+    <projectUrl>https://github.com/jbevain/cecil</projectUrl>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="libraries\Mono.Cecil*" target="lib\net35"/>
+    <file src="libraries\Mono.Cecil*" target="lib\net46"/>
+    <file src="..\install.ps1" target="tools"/>
+  </files>
+</package>
