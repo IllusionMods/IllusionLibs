@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Removes the hard cap of 20 accessories on characters</description>
+    <authors>Joan6694</authors>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="libraries\MoreAccessories.dll" target="lib\net35"/>
+    <file src="..\install.ps1" target="tools"/>
+  </files>
+</package>
