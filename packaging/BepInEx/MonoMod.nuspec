@@ -9,7 +9,6 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\MonoMod*" target="lib\net35"/>
     <file src="libraries\MonoMod*" target="lib\net46"/>
     <file src="..\install.ps1" target="tools"/>
   </files>

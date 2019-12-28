@@ -2,15 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>IllusionLibs.BepInEx</id>
-    <version>5.0.0</version>
+    <version>5.0.1</version>
     <description>Unity game patcher and plugin framework</description>
     <authors>Bepis, GHorsington</authors>
     <projectUrl>https://github.com/BepInEx/BepInEx</projectUrl>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\BepInEx.dll" target="lib\net35"/>
-    <file src="libraries\BepInEx.xml" target="lib\net35"/>
     <file src="libraries\BepInEx.dll" target="lib\net46"/>
     <file src="libraries\BepInEx.xml" target="lib\net46"/>
     <file src="..\install.ps1" target="tools"/>

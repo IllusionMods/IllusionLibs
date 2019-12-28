@@ -1155,9 +1155,30 @@
         <member name="P:BepInEx.ThreadingHelper.InvokeRequired">
             <summary>
             False if current code is executing on the main unity thread, otherwise True.
-            Warning: Will return false before the first frame finishes (i.e. inside plugin Awake and Start methods).
+            Warning: Will return true before the first frame finishes (i.e. inside plugin Awake and Start methods).
             </summary>
             <inheritdoc />
+        </member>
+        <member name="T:BepInEx.ThreadingExtensions">
+            <summary>
+            Convenience extensions for utilizing multiple threads and using the <see cref="T:BepInEx.ThreadingHelper"/>.
+            </summary>
+        </member>
+        <member name="M:BepInEx.ThreadingExtensions.RunParallel``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Int32)">
+            <inheritdoc cref="M:BepInEx.ThreadingExtensions.RunParallel``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)"/>
+        </member>
+        <member name="M:BepInEx.ThreadingExtensions.RunParallel``2(System.Collections.Generic.IList{``0},System.Func{``0,``1},System.Int32)">
+            <summary>
+            Apply a function to a collection of data by spreading the work on multiple threads.
+            Outputs of the functions are returned to the current thread and yielded one by one.
+            </summary>
+            <typeparam name="TIn">Type of the input values.</typeparam>
+            <typeparam name="TOut">Type of the output values.</typeparam>
+            <param name="data">Input values for the work function.</param>
+            <param name="work">Function to apply to the data on multiple threads at once.</param>
+            <param name="workerCount">Number of worker threads. By default SystemInfo.processorCount is used.</param>
+            <exception cref="T:System.Reflection.TargetInvocationException">An exception was thrown inside one of the threads, and the operation was aborted.</exception>
+            <exception cref="T:System.ArgumentException">Need at least 1 workerCount.</exception>
         </member>
         <member name="T:BepInEx.Utility">
             <summary>
