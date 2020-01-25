@@ -1,6 +1,9 @@
 name: Push to azure nuget feed
 
-on: [push]
+on:
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
