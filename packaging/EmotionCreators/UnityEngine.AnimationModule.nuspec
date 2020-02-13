@@ -8,7 +8,7 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.AssetBundleModule.*" target="lib\net46"/>
+    <file src="libraries\UnityEngine.AnimationModule.*" target="lib\net46"/>
     <file src="..\install.ps1" target="tools"/>
   </files>
 </package>
