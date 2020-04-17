@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Steam version of the game code. Use if the plugin needs to use classes available only in the Steam release. Otherwise use the AI-Girl version.</description>
+    <authors>Illusion</authors>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="libraries\Assembly-CSharp.dll" target="lib\net46"/>
+    <file src="..\install.ps1" target="tools"/>
+  </files>
+</package>
