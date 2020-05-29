@@ -27,6 +27,7 @@ jobs:
         gci -Path KoikatsuParty -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.KoikatsuParty.$($_.BaseName);gameVersion=2019.4.27;unityVersion=5.6.2" }
         gci -Path PlayHome -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.PlayHome.$($_.BaseName);gameVersion=2018.3.11;unityVersion=5.5.5" }
         gci -Path HoneySelect -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect.$($_.BaseName);gameVersion=2017.6.30;unityVersion=5.3.5" }
+        gci -Path HoneySelect2 -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect2.$($_.BaseName);gameVersion=2020.05.29;unityVersion=2018.4.11" }
         gci -Path XUnity -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.XUnity.$($_.BaseName)" }
         gci -Path BepInEx -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.BepInEx.$($_.BaseName)" }
       
