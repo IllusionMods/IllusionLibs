@@ -666,6 +666,24 @@
             String is the data to deserialize, Type is the object's type, should return instance to an object of Type.
             </summary>
         </member>
+        <member name="P:BepInEx.ConsoleManager.ConsoleActive">
+            <summary>
+            True if an external console has been started, false otherwise.
+            </summary>
+        </member>
+        <member name="P:BepInEx.ConsoleManager.StandardOutStream">
+            <summary>
+            The stream that writes to the standard out stream of the process. Should never be null.
+            </summary>
+        </member>
+        <member name="P:BepInEx.ConsoleManager.ConsoleStream">
+            <summary>
+            The stream that writes to an external console. Null if no such console exists
+            </summary>
+        </member>
+        <member name="M:BepInEx.PluginInfo.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:BepInEx.BepInPlugin">
             <summary>
             This attribute denotes that a class is a plugin, and specifies the required metadata.
@@ -1080,6 +1098,7 @@
         <member name="P:BepInEx.Paths.GameRootPath">
             <summary>
                 The directory that the currently executing process resides in.
+            	<para>On OSX however, this is the parent directory of the game.app folder.</para>
             </summary>
         </member>
         <member name="P:BepInEx.Paths.ManagedPath">
@@ -1205,6 +1224,14 @@
             <param name="parts">The multiple paths to combine together.</param>
             <returns>A combined path.</returns>
         </member>
+        <member name="M:BepInEx.Utility.ParentDirectory(System.String,System.Int32)">
+            <summary>
+            Returns the parent directory of a path, optionally specifying the amount of levels.
+            </summary>
+            <param name="path">The path to get the parent directory of.</param>
+            <param name="levels">The amount of levels to traverse. Defaults to 1</param>
+            <returns>The parent directory.</returns>
+        </member>
         <member name="M:BepInEx.Utility.SafeParseBool(System.String,System.Boolean)">
             <summary>
             Tries to parse a bool, with a default value if unable to parse.
@@ -1264,6 +1291,16 @@
             <param name="access">File access options</param>
             <param name="share">File share options</param>
             <returns></returns>
+        </member>
+        <member name="P:BepInEx.Utility.CurrentOs">
+            <summary>
+            Current OS BepInEx is running on.
+            </summary>
+        </member>
+        <member name="T:UnityInjector.ConsoleUtil.SafeConsole">
+            <summary>
+            Console class with safe handlers for Unity 4.x, which does not have a proper Console implementation
+            </summary>
         </member>
     </members>
 </doc>

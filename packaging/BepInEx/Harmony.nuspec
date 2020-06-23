@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>2.0.0-beta2</version>
-    <description>A library for patching, replacing and decorating .NET and Mono methods during runtime</description>
-    <authors>pardeike</authors>
-    <projectUrl>https://github.com/pardeike/Harmony</projectUrl>
+    <version>2.0.3.1</version>
+    <description>HarmonyX - A library for patching, replacing and decorating .NET and Mono methods during runtime</description>
+    <authors>pardeike, Horse, Marco and others</authors>
+    <projectUrl>https://github.com/BepInEx/HarmonyX</projectUrl>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>

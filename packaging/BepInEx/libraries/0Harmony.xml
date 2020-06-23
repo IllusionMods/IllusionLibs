@@ -4,404 +4,39 @@
         <name>0Harmony</name>
     </assembly>
     <members>
-        <member name="T:HarmonyLib.DelegateTypeFactory">
-            <summary>A factory to create delegate types</summary>
+        <member name="T:HarmonyLib.Priority">
+            <summary>A patch priority</summary>
         </member>
-        <member name="M:HarmonyLib.DelegateTypeFactory.#ctor">
-            <summary>Default constructor</summary>
+        <member name="F:HarmonyLib.Priority.Last">
+            <summary>Patch last</summary>
         </member>
-        <member name="M:HarmonyLib.DelegateTypeFactory.CreateDelegateType(System.Reflection.MethodInfo)">
-             <summary>Creates a delegate type for a method</summary>
-             <param name="method">The method</param>
-             <returns>The new delegate type</returns>
-            
+        <member name="F:HarmonyLib.Priority.VeryLow">
+            <summary>Patch with very low priority</summary>
         </member>
-        <member name="T:HarmonyLib.GetterHandler`2">
-             <summary>A getter delegate type</summary>
-             <typeparam name="T">Type that getter gets field/property value from</typeparam>
-             <typeparam name="S">Type of the value that getter gets</typeparam>
-             <param name="source">The instance get getter uses</param>
-             <returns>An delegate</returns>
-            
+        <member name="F:HarmonyLib.Priority.Low">
+            <summary>Patch with low priority</summary>
         </member>
-        <member name="T:HarmonyLib.SetterHandler`2">
-             <summary>A setter delegate type</summary>
-             <typeparam name="T">Type that setter sets field/property value for</typeparam>
-             <typeparam name="S">Type of the value that setter sets</typeparam>
-             <param name="source">The instance the setter uses</param>
-             <param name="value">The value the setter uses</param>
-             <returns>An delegate</returns>
-            
+        <member name="F:HarmonyLib.Priority.LowerThanNormal">
+            <summary>Patch with lower than normal priority</summary>
         </member>
-        <member name="T:HarmonyLib.InstantiationHandler`1">
-             <summary>A constructor delegate type</summary>
-             <typeparam name="T">Type that constructor creates</typeparam>
-             <returns>An delegate</returns>
-            
+        <member name="F:HarmonyLib.Priority.Normal">
+            <summary>Patch with normal priority</summary>
         </member>
-        <member name="T:HarmonyLib.FastAccess">
-            <summary>A helper class for fast access to getters and setters</summary>
+        <member name="F:HarmonyLib.Priority.HigherThanNormal">
+            <summary>Patch with higher than normal priority</summary>
         </member>
-        <member name="M:HarmonyLib.FastAccess.CreateInstantiationHandler``1">
-             <summary>Creates an instantiation delegate</summary>
-             <typeparam name="T">Type that constructor creates</typeparam>
-             <returns>The new instantiation delegate</returns>
-            
+        <member name="F:HarmonyLib.Priority.High">
+            <summary>Patch with high priority</summary>
         </member>
-        <member name="M:HarmonyLib.FastAccess.CreateGetterHandler``2(System.Reflection.PropertyInfo)">
-             <summary>Creates an getter delegate for a property</summary>
-             <typeparam name="T">Type that getter reads property from</typeparam>
-             <typeparam name="S">Type of the property that gets accessed</typeparam>
-             <param name="propertyInfo">The property</param>
-             <returns>The new getter delegate</returns>
-            
+        <member name="F:HarmonyLib.Priority.VeryHigh">
+            <summary>Patch with very high priority</summary>
         </member>
-        <member name="M:HarmonyLib.FastAccess.CreateGetterHandler``2(System.Reflection.FieldInfo)">
-             <summary>Creates an getter delegate for a field</summary>
-             <typeparam name="T">Type that getter reads field from</typeparam>
-             <typeparam name="S">Type of the field that gets accessed</typeparam>
-             <param name="fieldInfo">The field</param>
-             <returns>The new getter delegate</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.FastAccess.CreateFieldGetter``2(System.String[])">
-             <summary>Creates an getter delegate for a field (with a list of possible field names)</summary>
-             <typeparam name="T">Type that getter reads field/property from</typeparam>
-             <typeparam name="S">Type of the field/property that gets accessed</typeparam>
-             <param name="names">A list of possible field names</param>
-             <returns>The new getter delegate</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.FastAccess.CreateSetterHandler``2(System.Reflection.PropertyInfo)">
-             <summary>Creates an setter delegate</summary>
-             <typeparam name="T">Type that setter assigns property value to</typeparam>
-             <typeparam name="S">Type of the property that gets assigned</typeparam>
-             <param name="propertyInfo">The property</param>
-             <returns>The new setter delegate</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.FastAccess.CreateSetterHandler``2(System.Reflection.FieldInfo)">
-             <summary>Creates an setter delegate for a field</summary>
-             <typeparam name="T">Type that setter assigns field value to</typeparam>
-             <typeparam name="S">Type of the field that gets assigned</typeparam>
-             <param name="fieldInfo">The field</param>
-             <returns>The new getter delegate</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.FastInvokeHandler">
-             <summary>A delegate to invoke a method</summary>
-             <param name="target">The instance</param>
-             <param name="parameters">The method parameters</param>
-             <returns>The method result</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.MethodInvoker">
-            <summary>A helper class to invoke method with delegates</summary>
-        </member>
-        <member name="M:HarmonyLib.MethodInvoker.GetHandler(System.Reflection.Emit.DynamicMethod,System.Reflection.Module)">
-             <summary>Creates a fast invocation handler from a method and a module</summary>
-             <param name="methodInfo">The method to invoke</param>
-             <param name="module">The module context</param>
-             <returns>The fast invocation handler</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.MethodInvoker.GetHandler(System.Reflection.MethodInfo)">
-             <summary>Creates a fast invocation handler from a method and a module</summary>
-             <param name="methodInfo">The method to invoke</param>
-             <returns>The fast invocation handler</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.DynamicTools">
-            <summary>Creating dynamic methods</summary>
-        </member>
-        <member name="T:HarmonyLib.Protection">
-            <summary>A bit-field of flags for protections</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_NOACCESS">
-            <summary>No access</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_READONLY">
-            <summary>Read only</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_READWRITE">
-            <summary>Read write</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_WRITECOPY">
-            <summary>Write copy</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_EXECUTE">
-            <summary>No access</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_EXECUTE_READ">
-            <summary>Execute read</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_EXECUTE_READWRITE">
-            <summary>Execute read write</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_EXECUTE_WRITECOPY">
-            <summary>Execute write copy</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_GUARD">
-            <summary>guard</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_NOCACHE">
-            <summary>No cache</summary>
-        </member>
-        <member name="F:HarmonyLib.Protection.PAGE_WRITECOMBINE">
-            <summary>Write combine</summary>
-        </member>
-        <member name="T:HarmonyLib.Memory">
-            <summary>A low level memory helper</summary>
-        </member>
-        <member name="P:HarmonyLib.Memory.IsWindows">
-             <summary>Is current environment Windows?</summary>
-             <value>True if it is Windows</value>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.VirtualProtect(System.IntPtr,System.UIntPtr,HarmonyLib.Protection,HarmonyLib.Protection@)">
-             <summary>Virtual protect</summary>
-             <param name="lpAddress">The address</param>
-             <param name="dwSize">The size</param>
-             <param name="flNewProtect">The fl new protect</param>
-             <param name="lpflOldProtect">[out] The lpfl old protect</param>
-             <returns>Status</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.UnprotectMemoryPage(System.Int64)">
-             <summary>Unprotect a memory page</summary>
-             <param name="memory">The memory address</param>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.MarkForNoInlining(System.Reflection.MethodBase)">
-            <summary>Mark method for no inlining</summary>
-            <param name="method">The method to change</param>
-        </member>
-        <member name="M:HarmonyLib.Memory.DetourMethod(System.Reflection.MethodBase,System.Reflection.MethodBase)">
-             <summary>Detours a method</summary>
-             <param name="original">The original method</param>
-             <param name="replacement">The replacement method</param>
-             <returns>An error string</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.WriteJump(System.Int64,System.Int64)">
-             <summary>Writes a jump to memory</summary>
-             <param name="memory">The memory address</param>
-             <param name="destination">Jump destination</param>
-             <returns>An error string</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.GetMethodStart(System.Reflection.MethodBase,System.Exception@)">
-             <summary>Gets the start of a method in memory</summary>
-             <param name="method">The method</param>
-             <param name="exception">[out] Details of the exception</param>
-             <returns>The method start address</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.CompareBytes(System.Int64,System.Byte[])">
-             <summary>Compare bytes</summary>
-             <param name="memory">The memory address</param>
-             <param name="values">The bytes to compare to</param>
-             <returns>True if memory address contains the bytes</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.ReadByte(System.Int64)">
-             <summary>Reads a byte</summary>
-             <param name="memory">The memory address</param>
-             <returns>The byte</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.ReadInt(System.Int64)">
-             <summary>Reads an int</summary>
-             <param name="memory">The memory address</param>
-             <returns>The int</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.ReadLong(System.Int64)">
-             <summary>Reads a long</summary>
-             <param name="memory">The memory address</param>
-             <returns>The long</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.WriteByte(System.Int64,System.Byte)">
-             <summary>Writes a byte</summary>
-             <param name="memory">The memory address</param>
-             <param name="value">The byte</param>
-             <returns>Advanced memory address</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.WriteBytes(System.Int64,System.Byte[])">
-             <summary>Writes some bytes</summary>
-             <param name="memory">The memory address</param>
-             <param name="values">The bytes to write</param>
-             <returns>Advanced memory address</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.WriteInt(System.Int64,System.Int32)">
-             <summary>Writes an int</summary>
-             <param name="memory">The memory address</param>
-             <param name="value">The int</param>
-             <returns>Advanced memory address</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.Memory.WriteLong(System.Int64,System.Int64)">
-             <summary>Writes a long</summary>
-             <param name="memory">The memory address</param>
-             <param name="value"> The long</param>
-             <returns>Advanced memory address</returns>
-            
-        </member>
-        <member name="F:HarmonyLib.MethodPatcher.INSTANCE_PARAM">
-            special parameter names that can be used in prefix and postfix methods
-        </member>
-        <member name="T:HarmonyLib.PatchFunctions">
-            <summary>Patch function helpers</summary>
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.AddPrefix(HarmonyLib.PatchInfo,System.String,HarmonyLib.HarmonyMethod)">
-             <summary>Adds a prefix</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-             <param name="info">The annotation info</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.RemovePrefix(HarmonyLib.PatchInfo,System.String)">
-             <summary>Removes a prefix</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.AddPostfix(HarmonyLib.PatchInfo,System.String,HarmonyLib.HarmonyMethod)">
-             <summary>Adds a postfix</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-             <param name="info">The annotation info</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.RemovePostfix(HarmonyLib.PatchInfo,System.String)">
-             <summary>Removes a postfix</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.AddTranspiler(HarmonyLib.PatchInfo,System.String,HarmonyLib.HarmonyMethod)">
-             <summary>Adds a transpiler</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-             <param name="info">The annotation info</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.RemoveTranspiler(HarmonyLib.PatchInfo,System.String)">
-             <summary>Removes a transpiler</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.AddFinalizer(HarmonyLib.PatchInfo,System.String,HarmonyLib.HarmonyMethod)">
-             <summary>Adds a finalizer</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-             <param name="info">The annotation info</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.RemoveFinalizer(HarmonyLib.PatchInfo,System.String)">
-             <summary>Removes a finalizer</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="owner">The owner (Harmony ID)</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.RemovePatch(HarmonyLib.PatchInfo,System.Reflection.MethodInfo)">
-             <summary>Removes a patch method</summary>
-             <param name="patchInfo">The patch info</param>
-             <param name="patch">The patch method</param>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.GetInstructions(System.Reflection.Emit.ILGenerator,System.Reflection.MethodBase)">
-             <summary>Gets all instructions from a method</summary>
-             <param name="generator">The generator (for defining labels)</param>
-             <param name="method">The original method</param>
-             <returns>The instructions</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.GetSortedPatchMethods(System.Reflection.MethodBase,HarmonyLib.Patch[])">
-             <summary>Gets sorted patch methods</summary>
-             <param name="original">The original method</param>
-             <param name="patches">Patches to sort</param>
-             <returns>The sorted patch methods</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchFunctions.UpdateWrapper(System.Reflection.MethodBase,HarmonyLib.PatchInfo,System.String)">
-             <summary>Creates new dynamic method with the latest patches and detours the original method</summary>
-             <param name="original">The original method</param>
-             <param name="patchInfo">Information describing the patches</param>
-             <param name="instanceID">Harmony ID</param>
-             <returns>The newly created dynamic method</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.#ctor(HarmonyLib.Patch[])">
-            <summary>Creates a patch sorter</summary>
-            <param name="patches">Array of patches that will be sorted</param>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.Sort(System.Reflection.MethodBase)">
-            <summary>Sorts internal PatchSortingWrapper collection and caches the results.
-            After first run the result is provided from the cache.</summary>
-            <param name="original">The original method</param>
-            <returns>The sorted patch methods</returns>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.ComparePatchLists(HarmonyLib.Patch[])">
-            <summary>Checks if the sorter was created with the same patch list and as a result can be reused to
-            get the sorted order of the patches.</summary>
-            <param name="patches">List of patches to check against</param>
-            <returns>true if equal</returns>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.CullDependency">
-            <summary>Removes one unresolved dependency from the least important patch.</summary>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.ProcessWaitingList">
-            <summary>Outputs all unblocked patches from the waiting list to results list</summary>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.AddNodeToResult(HarmonyLib.PatchSorter.PatchSortingWrapper)">
-            <summary>Adds patch to both results list and handled patches set</summary>
-            <param name="node">Patch to add</param>
-        </member>
-        <member name="T:HarmonyLib.PatchSorter.PatchSortingWrapper">
-            <summary>Wrapper used over the Patch object to allow faster dependency access and
-            dependency removal in case of cyclic dependencies</summary>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.#ctor(HarmonyLib.Patch)">
-            <summary>Create patch wrapper object used for sorting</summary>
-            <param name="patch">Patch to wrap</param>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.CompareTo(System.Object)">
-            <summary>Determines how patches sort</summary>
-            <param name="obj">The other patch</param>
-            <returns>integer to define sort order (-1, 0, 1)</returns>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.Equals(System.Object)">
-            <summary>Determines whether patches are equal</summary>
-            <param name="obj">The other patch</param>
-            <returns>true if equal</returns>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.GetHashCode">
-            <summary>Hash function</summary>
-            <returns>A hash code</returns>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.AddBeforeDependency(System.Collections.Generic.IEnumerable{HarmonyLib.PatchSorter.PatchSortingWrapper})">
-            <summary>Bidirectionally registers Patches as after dependencies</summary>
-            <param name="dependencies">List of dependencies to register</param>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.AddAfterDependency(System.Collections.Generic.IEnumerable{HarmonyLib.PatchSorter.PatchSortingWrapper})">
-            <summary>Bidirectionally registers Patches as before dependencies</summary>
-            <param name="dependencies">List of dependencies to register</param>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.RemoveAfterDependency(HarmonyLib.PatchSorter.PatchSortingWrapper)">
-            <summary>Bidirectionally removes Patch from after dependencies</summary>
-            <param name="afterNode">Patch to remove</param>
-        </member>
-        <member name="M:HarmonyLib.PatchSorter.PatchSortingWrapper.RemoveBeforeDependency(HarmonyLib.PatchSorter.PatchSortingWrapper)">
-            <summary>Bidirectionally removes Patch from before dependencies</summary>
-            <param name="beforeNode">Patch to remove</param>
+        <member name="F:HarmonyLib.Priority.First">
+            <summary>Patch first</summary>
         </member>
         <member name="T:HarmonyLib.MethodType">
-            <summary>Specifies the type of method</summary>
+             <summary>Specifies the type of method</summary>
+            
         </member>
         <member name="F:HarmonyLib.MethodType.Normal">
             <summary>This is a normal method</summary>
@@ -419,7 +54,8 @@
             <summary>This is a static constructor</summary>
         </member>
         <member name="T:HarmonyLib.ArgumentType">
-            <summary>Specifies the type of argument</summary>
+             <summary>Specifies the type of argument</summary>
+            
         </member>
         <member name="F:HarmonyLib.ArgumentType.Normal">
             <summary>This is a normal argument</summary>
@@ -434,7 +70,8 @@
             <summary>This is a pointer argument (&amp;)</summary>
         </member>
         <member name="T:HarmonyLib.HarmonyPatchType">
-            <summary>Specifies the type of patch</summary>
+             <summary>Specifies the type of patch</summary>
+            
         </member>
         <member name="F:HarmonyLib.HarmonyPatchType.All">
             <summary>Any patch</summary>
@@ -451,14 +88,29 @@
         <member name="F:HarmonyLib.HarmonyPatchType.Finalizer">
             <summary>A finalizer</summary>
         </member>
+        <member name="F:HarmonyLib.HarmonyPatchType.ReversePatch">
+            <summary>A reverse patch</summary>
+        </member>
+        <member name="T:HarmonyLib.HarmonyReversePatchType">
+             <summary>Specifies the type of reverse patch</summary>
+            
+        </member>
+        <member name="F:HarmonyLib.HarmonyReversePatchType.Original">
+            <summary>Use the unmodified original method</summary>
+        </member>
+        <member name="F:HarmonyLib.HarmonyReversePatchType.Snapshot">
+            <summary>Use the original as it is right now including previous patches but excluding future ones</summary>
+        </member>
         <member name="T:HarmonyLib.HarmonyAttribute">
-            <summary>The base class for all Harmony annotations (not meant to be used directly)</summary>
+             <summary>The base class for all Harmony annotations (not meant to be used directly)</summary>
+            
         </member>
         <member name="F:HarmonyLib.HarmonyAttribute.info">
             <summary>The common information for all attributes</summary>
         </member>
         <member name="T:HarmonyLib.HarmonyPatch">
-            <summary>The main Harmony annotation class</summary>
+             <summary>Annotation to define your Harmony patch methods</summary>
+            
         </member>
         <member name="M:HarmonyLib.HarmonyPatch.#ctor">
              <summary>An empty annotation can be used together with TargetMethod(s)</summary>
@@ -577,6 +229,14 @@
              <param name="argumentVariations">An array of extra argument subtypes (ref, out, pointer)</param>
             
         </member>
+        <member name="T:HarmonyLib.HarmonyReversePatch">
+             <summary>Annotation to define your standin methods for reverse patching</summary>
+            
+        </member>
+        <member name="M:HarmonyLib.HarmonyReversePatch.#ctor(HarmonyLib.HarmonyReversePatchType)">
+             <summary>An annotation that specifies the type of reverse patching</summary>
+            
+        </member>
         <member name="T:HarmonyLib.HarmonyPatchAll">
             <summary>A Harmony annotation to define that all methods in a class are to be patched</summary>
         </member>
@@ -660,92 +320,53 @@
              <param name="name">New name</param>
             
         </member>
-        <member name="F:HarmonyLib.UpgradeToLatestVersion.version">
-            <summary>The version.</summary>
+        <member name="T:HarmonyLib.ParameterByRefAttribute">
+            <summary>
+            Specifies the indices of parameters that are ByRef.
+            For use with <see cref="M:HarmonyLib.Harmony.PatchAll(System.Type)"/> overload only.
+            </summary>
         </member>
-        <member name="T:HarmonyLib.CodeInstruction">
-            <summary>An abstract wrapper around OpCode and their operands. Used by transpilers</summary>
+        <member name="P:HarmonyLib.ParameterByRefAttribute.ParameterIndices">
+            <summary>
+            The indices of parameters that are ByRef.
+            </summary>
         </member>
-        <member name="F:HarmonyLib.CodeInstruction.opcode">
-            <summary>The opcode</summary>
+        <member name="M:HarmonyLib.ParameterByRefAttribute.#ctor(System.Int32[])">
+            <param name="parameterIndices">The indices of parameters that are ByRef.</param>
         </member>
-        <member name="F:HarmonyLib.CodeInstruction.operand">
-            <summary>The operand</summary>
+        <member name="T:HarmonyLib.InvalidHarmonyPatchArgumentException">
+            <summary>
+                An exception thrown when a patch argument in a Harmony patch is invalid.
+            </summary>
         </member>
-        <member name="F:HarmonyLib.CodeInstruction.labels">
-            <summary>All labels defined on this instruction</summary>
+        <member name="P:HarmonyLib.InvalidHarmonyPatchArgumentException.Original">
+            <summary>
+                Original method to be patched.
+            </summary>
         </member>
-        <member name="F:HarmonyLib.CodeInstruction.blocks">
-            <summary>All exception block boundaries defined on this instruction</summary>
+        <member name="P:HarmonyLib.InvalidHarmonyPatchArgumentException.Patch">
+            <summary>
+                Patch that was attempted to be applied.
+            </summary>
         </member>
-        <member name="M:HarmonyLib.CodeInstruction.#ctor(System.Reflection.Emit.OpCode,System.Object)">
-             <summary>Creates a new CodeInstruction with a given opcode and optional operand</summary>
-             <param name="opcode">The code</param>
-             <param name="operand">The operand</param>
-            
+        <member name="P:HarmonyLib.InvalidHarmonyPatchArgumentException.Message">
+            <inheritdoc />
         </member>
-        <member name="M:HarmonyLib.CodeInstruction.#ctor(HarmonyLib.CodeInstruction)">
-             <summary>Create a full copy (including labels and exception blocks) of a CodeInstruction</summary>
-             <param name="instruction">The instruction to copy</param>
-            
+        <member name="M:HarmonyLib.InvalidHarmonyPatchArgumentException.#ctor(System.String,System.Reflection.MethodBase,System.Reflection.MethodInfo)">
+            <summary>
+                Constructs a new exception instance.
+            </summary>
+            <param name="message">Message of the exception.</param>
+            <param name="original">Original method to be patched.</param>
+            <param name="patch">Patch that was attempted to be applied.</param>
         </member>
-        <member name="M:HarmonyLib.CodeInstruction.Clone">
-             <summary>Clones a CodeInstruction and resets its labels and exception blocks</summary>
-             <returns>A lightweight copy of this code instruction</returns>
-            
+        <member name="T:HarmonyLib.MemberNotFoundException">
+            <summary>
+                An exception thrown when a reflection member is not found.
+            </summary>
         </member>
-        <member name="M:HarmonyLib.CodeInstruction.Clone(System.Reflection.Emit.OpCode)">
-             <summary>Clones a CodeInstruction, resets labels and exception blocks and sets its opcode</summary>
-             <param name="opcode">The opcode</param>
-             <returns>A copy of this CodeInstruction with a new opcode</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.CodeInstruction.Clone(System.Object)">
-             <summary>Clones a CodeInstruction, resets labels and exception blocks and sets its operand</summary>
-             <param name="operand">The opcode</param>
-             <returns>A copy of this CodeInstruction with a new operand</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.CodeInstruction.ToString">
-             <summary>Returns a string representation of the code instruction</summary>
-             <returns>A string representation of the code instruction</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.ExceptionBlockType">
-            <summary>Exception block types</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.BeginExceptionBlock">
-            <summary>The beginning of an exception block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.BeginCatchBlock">
-            <summary>The beginning of a catch block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.BeginExceptFilterBlock">
-            <summary>The beginning of an except filter block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.BeginFaultBlock">
-            <summary>The beginning of a fault block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.BeginFinallyBlock">
-            <summary>The beginning of a finally block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlockType.EndExceptionBlock">
-            <summary>The end of an exception block</summary>
-        </member>
-        <member name="T:HarmonyLib.ExceptionBlock">
-            <summary>An exception block</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlock.blockType">
-            <summary>Block type</summary>
-        </member>
-        <member name="F:HarmonyLib.ExceptionBlock.catchType">
-            <summary>Catch type</summary>
-        </member>
-        <member name="M:HarmonyLib.ExceptionBlock.#ctor(HarmonyLib.ExceptionBlockType,System.Type)">
-             <summary>Creates an exception block</summary>
-             <param name="blockType">Block type</param>
-             <param name="catchType">Catch type</param>
-            
+        <member name="M:HarmonyLib.MemberNotFoundException.#ctor(System.String)">
+            <inheritdoc />
         </member>
         <member name="T:HarmonyLib.Harmony">
             <summary>The Harmony instance is the main entry to Harmony. After creating one with an unique identifier, it is used to patch and query the current application domain</summary>
@@ -766,17 +387,17 @@
             
         </member>
         <member name="M:HarmonyLib.Harmony.PatchAll">
-            <summary>Searches current assembly for Harmony annotations and uses them to create patches</summary>
+             <summary>Searches current assembly for Harmony annotations and uses them to create patches</summary>
             
         </member>
         <member name="M:HarmonyLib.Harmony.ProcessorForAnnotatedClass(System.Type)">
-            <summary>Create a patch processor from an annotated class</summary>
-            <param name="type">The class</param>
+             <summary>Create a patch processor from an annotated class</summary>
+             <param name="type">The class</param>
             
         </member>
         <member name="M:HarmonyLib.Harmony.PatchAll(System.Reflection.Assembly)">
-            <summary>Searches an assembly for Harmony annotations and uses them to create patches</summary>
-            <param name="assembly">The assembly</param>
+             <summary>Searches an assembly for Harmony annotations and uses them to create patches</summary>
+             <param name="assembly">The assembly</param>
             
         </member>
         <member name="M:HarmonyLib.Harmony.Patch(System.Reflection.MethodBase,HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod)">
@@ -788,6 +409,20 @@
              <param name="finalizer">An optional finalizer method wrapped in a HarmonyMethod object</param>
              <returns>The dynamic method that was created to patch the original method</returns>
             
+        </member>
+        <member name="M:HarmonyLib.Harmony.ReversePatch(System.Reflection.MethodBase,HarmonyLib.HarmonyMethod,System.Reflection.MethodInfo)">
+            <summary>Patches a foreign method onto a stub method of yours and optionally applies transpilers during the process</summary>
+            <param name="original">The original method/constructor you want to duplicate</param>
+            <param name="standin">Your stub method that will become the original. Needs to have the correct signature (either original or whatever your transpilers generates)</param>
+            <param name="transpiler">An optional transpiler that will be applied during the process</param>
+        </member>
+        <member name="M:HarmonyLib.Harmony.CreateReversePatcher(System.Reflection.MethodBase,System.Reflection.MethodInfo)">
+            <summary>
+            Creates a new reverse patch instance that allows to copy the IL of original method into another one.
+            </summary>
+            <param name="original">Original method to copy IL from.</param>
+            <param name="standin">Method to copy IL to.</param>
+            <returns>Reverse patcher instance that you can apply.</returns>
         </member>
         <member name="M:HarmonyLib.Harmony.UnpatchAll(System.String)">
              <summary>Unpatches methods</summary>
@@ -835,6 +470,26 @@
              <returns>A dictionary containing assembly versions keyed by Harmony IDs</returns>
             
         </member>
+        <member name="M:HarmonyLib.Harmony.PatchAll(System.Type)">
+            <summary>
+            Applies all patches specified in the type.
+            </summary>
+            <param name="type">The type to scan.</param>
+        </member>
+        <member name="M:HarmonyLib.Harmony.CreateAndPatchAll(System.Type,System.String)">
+            <summary>
+            Creates a new Harmony instance and applies all patches specified in the type.
+            </summary>
+            <param name="type">The type to scan for patches.</param>
+            <param name="harmonyInstanceId">The ID for the Harmony instance to create, which will be used.</param>
+        </member>
+        <member name="M:HarmonyLib.Harmony.CreateAndPatchAll(System.Reflection.Assembly,System.String)">
+            <summary>
+            Applies all patches specified in the assembly.
+            </summary>
+            <param name="assembly">The assembly to scan.</param>
+            <param name="harmonyInstanceId">The ID for the Harmony instance to create, which will be used.</param>
+        </member>
         <member name="T:HarmonyLib.HarmonyMethod">
             <summary>A wrapper around a method to use it as a patch (for example a Prefix)</summary>
         </member>
@@ -861,6 +516,9 @@
         </member>
         <member name="F:HarmonyLib.HarmonyMethod.after">
             <summary>After parameter</summary>
+        </member>
+        <member name="F:HarmonyLib.HarmonyMethod.reversePatchType">
+            <summary>Reverse patch type</summary>
         </member>
         <member name="M:HarmonyLib.HarmonyMethod.#ctor">
             <summary>Default constructor</summary>
@@ -921,41 +579,149 @@
              <returns>All annotations</returns>
             
         </member>
+        <member name="M:HarmonyLib.HarmonyMethodExtensions.GetMergedFromType(System.Type)">
+             <summary>Gets all annotations on a class in merged form</summary>
+             <param name="type">The class</param>
+             <returns>The merged HarmonyMethod</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.HarmonyMethodExtensions.GetMergedFromMethod(System.Reflection.MethodBase)">
+             <summary>Gets all annotations on a method in merged form</summary>
+             <param name="method">The method</param>
+             <returns>The merged HarmonyMethod</returns>
+            
+        </member>
         <member name="M:HarmonyLib.HarmonyMethodExtensions.GetFromMethod(System.Reflection.MethodBase)">
              <summary>Gets all annotations on a method</summary>
              <param name="method">The method</param>
              <returns>All annotations</returns>
             
         </member>
-        <member name="T:HarmonyLib.PatchInfoSerialization">
-            <summary>Patch serialization</summary>
+        <member name="T:HarmonyLib.Internal.Patching.HarmonyManipulator">
+            <summary>
+                IL manipulator to create Harmony-style patches
+            </summary>
         </member>
-        <member name="M:HarmonyLib.PatchInfoSerialization.Binder.BindToType(System.String,System.String)">
-             <summary>Control the binding of a serialized object to a type</summary>
-             <param name="assemblyName">Specifies the assembly name of the serialized object</param>
-             <param name="typeName">Specifies the type name of the serialized object</param>
-             <returns>The type of the object the formatter creates a new instance of</returns>
-            
+        <member name="F:HarmonyLib.Internal.Patching.HarmonyManipulator.INSTANCE_PARAM">
+            special parameter names that can be used in prefix and postfix methods
         </member>
-        <member name="M:HarmonyLib.PatchInfoSerialization.Serialize(HarmonyLib.PatchInfo)">
-             <summary>Serializes a patch info</summary>
-             <param name="patchInfo">The patch info</param>
-             <returns>A byte array</returns>
-            
+        <member name="M:HarmonyLib.Internal.Patching.HarmonyManipulator.MarkForNoInlining(System.Reflection.MethodBase)">
+            <summary>Mark method for no inlining</summary>
+            <param name="method">The method to change</param>
         </member>
-        <member name="M:HarmonyLib.PatchInfoSerialization.Deserialize(System.Byte[])">
-             <summary>Deserialize a patch info</summary>
-             <param name="bytes">The byte array</param>
-             <returns>A patch info</returns>
-            
+        <member name="T:HarmonyLib.Internal.Patching.ILManipulator">
+            <summary>
+                High-level IL code manipulator for MonoMod that allows to manipulate a method as a stream of CodeInstructions.
+            </summary>
         </member>
-        <member name="M:HarmonyLib.PatchInfoSerialization.PriorityComparer(System.Object,System.Int32,System.Int32)">
-             <summary>Compare function to sort patch priorities</summary>
-             <param name="obj">The patch</param>
-             <param name="index">Zero-based index</param>
-             <param name="priority">The priority</param>
-             <returns>A standard sort integer (-1, 0, 1)</returns>
-            
+        <member name="M:HarmonyLib.Internal.Patching.ILManipulator.#ctor(Mono.Cecil.Cil.MethodBody)">
+            <summary>
+                Initialize IL transpiler
+            </summary>
+            <param name="body">Body of the method to transpile</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.ILManipulator.AddTranspiler(System.Reflection.MethodInfo)">
+            <summary>
+                Adds a transpiler method that edits the IL of the given method
+            </summary>
+            <param name="transpiler">Transpiler method</param>
+            <exception cref="T:System.NotImplementedException">Currently not implemented</exception>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.ILManipulator.WriteTo(Mono.Cecil.Cil.MethodBody,System.Reflection.MethodBase)">
+            <summary>
+                Processes and writes IL to the provided method body.
+                Note that this cleans the existing method body (removes insturctions and exception handlers).
+            </summary>
+            <param name="body">Method body to write to.</param>
+            <param name="original">Original method that transpiler can optionally call into</param>
+            <exception cref="T:System.NotSupportedException">
+                One of IL opcodes contains a CallSide (e.g. calli), which is currently not
+                fully supported.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">One of IL opcodes with an operand contains a null operand.</exception>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.#ctor(HarmonyLib.Patch[])">
+            <summary>Creates a patch sorter</summary>
+            <param name="patches">Array of patches that will be sorted</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.Sort(System.Reflection.MethodBase)">
+            <summary>Sorts internal PatchSortingWrapper collection and caches the results.
+            After first run the result is provided from the cache.</summary>
+            <param name="original">The original method</param>
+            <returns>The sorted patch methods</returns>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.ComparePatchLists(HarmonyLib.Patch[])">
+            <summary>Checks if the sorter was created with the same patch list and as a result can be reused to
+            get the sorted order of the patches.</summary>
+            <param name="patches">List of patches to check against</param>
+            <returns>true if equal</returns>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.CullDependency">
+            <summary>Removes one unresolved dependency from the least important patch.</summary>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.ProcessWaitingList">
+            <summary>Outputs all unblocked patches from the waiting list to results list</summary>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.AddNodeToResult(HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper)">
+            <summary>Adds patch to both results list and handled patches set</summary>
+            <param name="node">Patch to add</param>
+        </member>
+        <member name="T:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper">
+            <summary>Wrapper used over the Patch object to allow faster dependency access and
+            dependency removal in case of cyclic dependencies</summary>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.#ctor(HarmonyLib.Patch)">
+            <summary>Create patch wrapper object used for sorting</summary>
+            <param name="patch">Patch to wrap</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.CompareTo(System.Object)">
+            <summary>Determines how patches sort</summary>
+            <param name="obj">The other patch</param>
+            <returns>integer to define sort order (-1, 0, 1)</returns>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.Equals(System.Object)">
+            <summary>Determines whether patches are equal</summary>
+            <param name="obj">The other patch</param>
+            <returns>true if equal</returns>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.GetHashCode">
+            <summary>Hash function</summary>
+            <returns>A hash code</returns>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.AddBeforeDependency(System.Collections.Generic.IEnumerable{HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper})">
+            <summary>Bidirectionally registers Patches as after dependencies</summary>
+            <param name="dependencies">List of dependencies to register</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.AddAfterDependency(System.Collections.Generic.IEnumerable{HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper})">
+            <summary>Bidirectionally registers Patches as before dependencies</summary>
+            <param name="dependencies">List of dependencies to register</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.RemoveAfterDependency(HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper)">
+            <summary>Bidirectionally removes Patch from after dependencies</summary>
+            <param name="afterNode">Patch to remove</param>
+        </member>
+        <member name="M:HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper.RemoveBeforeDependency(HarmonyLib.Internal.Patching.PatchSorter.PatchSortingWrapper)">
+            <summary>Bidirectionally removes Patch from before dependencies</summary>
+            <param name="beforeNode">Patch to remove</param>
+        </member>
+        <member name="T:HarmonyLib.Internal.RuntimeFixes.StackTraceFixes">
+            <summary>
+            Patching methods potentially messes up the stack.
+            Especially calls to GetExecutingAssembly won't turn in correct methods
+            </summary>
+        </member>
+        <member name="T:HarmonyLib.Internal.Util.ILEmitter">
+            <summary>
+            Helper wrapper around ILProcessor to allow emitting code at certain positions
+            </summary>
+        </member>
+        <member name="M:HarmonyLib.Internal.Util.MethodBodyLogExtensions.ToILDasmString(Mono.Cecil.Cil.MethodBody)">
+            <summary>
+                Write method body to a ILDasm -like representation
+            </summary>
+            <param name="mb">Method body to write</param>
+            <returns>String representation of the method body (locals and instruction)</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Unexpected exception block type</exception>
         </member>
         <member name="T:HarmonyLib.PatchInfo">
             <summary>Serializable patch information</summary>
@@ -984,6 +750,13 @@
              <param name="after">The after parameter</param>
             
         </member>
+        <member name="M:HarmonyLib.PatchInfo.AddPrefix(System.String,HarmonyLib.HarmonyMethod)">
+            <summary>
+            Adds a prefix method.
+            </summary>
+            <param name="owner">ID of the owner instance</param>
+            <param name="info">Method to add as prefix</param>
+        </member>
         <member name="M:HarmonyLib.PatchInfo.RemovePrefix(System.String)">
              <summary>Removes a prefix</summary>
              <param name="owner">The owner or (*) for any</param>
@@ -997,6 +770,13 @@
              <param name="before">The before parameter</param>
              <param name="after">The after parameter</param>
             
+        </member>
+        <member name="M:HarmonyLib.PatchInfo.AddPostfix(System.String,HarmonyLib.HarmonyMethod)">
+            <summary>
+            Adds a postfix
+            </summary>
+            <param name="owner">The owner (Harmony ID)</param>
+            <param name="info">Method to add as postfix</param>
         </member>
         <member name="M:HarmonyLib.PatchInfo.RemovePostfix(System.String)">
              <summary>Removes a postfix</summary>
@@ -1012,6 +792,13 @@
              <param name="after">The after parameter</param>
             
         </member>
+        <member name="M:HarmonyLib.PatchInfo.AddTranspiler(System.String,HarmonyLib.HarmonyMethod)">
+            <summary>
+            Adds a transpiler
+            </summary>
+            <param name="owner">The owner (Harmony ID)</param>
+            <param name="info">The method to add as transpiler</param>
+        </member>
         <member name="M:HarmonyLib.PatchInfo.RemoveTranspiler(System.String)">
              <summary>Removes a transpiler</summary>
              <param name="owner">The owner or (*) for any</param>
@@ -1025,6 +812,13 @@
              <param name="before">The before parameter</param>
              <param name="after">The after parameter</param>
             
+        </member>
+        <member name="M:HarmonyLib.PatchInfo.AddFinalizer(System.String,HarmonyLib.HarmonyMethod)">
+            <summary>
+            Adds a finalizer.
+            </summary>
+            <param name="owner">The owner (Harmony ID)</param>
+            <param name="info">Method to add as finalizer</param>
         </member>
         <member name="M:HarmonyLib.PatchInfo.RemoveFinalizer(System.String)">
              <summary>Removes a finalizer</summary>
@@ -1121,6 +915,12 @@
         <member name="T:HarmonyLib.PatchProcessor">
             <summary>A patch processor</summary>
         </member>
+        <member name="M:HarmonyLib.PatchProcessor.#ctor(HarmonyLib.Harmony,System.Reflection.MethodBase)">
+             <summary>Creates an empty patch processor</summary>
+             <param name="instance">The Harmony instance</param>
+             <param name="original">An optional original method</param>
+            
+        </member>
         <member name="M:HarmonyLib.PatchProcessor.#ctor(HarmonyLib.Harmony,System.Type,HarmonyLib.HarmonyMethod)">
              <summary>Creates a patch processor</summary>
              <param name="instance">The Harmony instance</param>
@@ -1129,13 +929,62 @@
             
         </member>
         <member name="M:HarmonyLib.PatchProcessor.#ctor(HarmonyLib.Harmony,System.Collections.Generic.List{System.Reflection.MethodBase},HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod,HarmonyLib.HarmonyMethod)">
-             <summary>Creates a patch processor</summary>
-             <param name="instance">The Harmony instance.</param>
-             <param name="originals">The original methods</param>
-             <param name="prefix">The optional prefix.</param>
-             <param name="postfix">The optional postfix.</param>
-             <param name="transpiler">The optional transpiler.</param>
-             <param name="finalizer">The optional finalizer.</param>
+            <summary>Creates a patch processor</summary>
+            <param name="instance">The Harmony instance.</param>
+            <param name="originals">The original methods</param>
+            <param name="prefix">The optional prefix.</param>
+            <param name="postfix">The optional postfix.</param>
+            <param name="transpiler">The optional transpiler.</param>
+            <param name="finalizer">The optional finalizer.</param>
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddOriginal(System.Reflection.MethodBase)">
+             <summary>Add an original method</summary>
+             <param name="original">The method that will be patched.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.SetOriginals(System.Collections.Generic.List{System.Reflection.MethodBase})">
+             <summary>Sets the original methods</summary>
+             <param name="originals">The methods that will be patched.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddPrefix(HarmonyLib.HarmonyMethod)">
+             <summary>Add a prefix</summary>
+             <param name="prefix">The prefix.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddPrefix(System.Reflection.MethodInfo)">
+             <summary>Add a prefix</summary>
+             <param name="fixMethod">The method.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddPostfix(HarmonyLib.HarmonyMethod)">
+             <summary>Add a postfix</summary>
+             <param name="postfix">The postfix.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddPostfix(System.Reflection.MethodInfo)">
+             <summary>Add a postfix</summary>
+             <param name="fixMethod">The method.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddTranspiler(HarmonyLib.HarmonyMethod)">
+             <summary>Add a transpiler</summary>
+             <param name="transpiler">The transpiler.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddTranspiler(System.Reflection.MethodInfo)">
+             <summary>Add a transpiler</summary>
+             <param name="fixMethod">The method.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddFinalizer(HarmonyLib.HarmonyMethod)">
+             <summary>Add a finalizer</summary>
+             <param name="finalizer">The finalizer.</param>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.AddFinalizer(System.Reflection.MethodInfo)">
+             <summary>Add a finalizer</summary>
+             <param name="fixMethod">The method.</param>
             
         </member>
         <member name="M:HarmonyLib.PatchProcessor.GetPatchInfo(System.Reflection.MethodBase)">
@@ -1144,7 +993,30 @@
              <returns>The patch information</returns>
             
         </member>
+        <member name="M:HarmonyLib.PatchProcessor.VersionInfo(System.Version@)">
+             <summary>Gets Harmony version for all active Harmony instances</summary>
+             <param name="currentVersion">[out] The current Harmony version</param>
+             <returns>A dictionary containing assembly versions keyed by Harmony IDs</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.GetOriginalInstructions(System.Reflection.MethodBase,System.Reflection.Emit.ILGenerator)">
+            <summary>Returns the methods unmodified list of CodeInstructions</summary>
+            <param name="original">The original method</param>
+            <param name="generator">Optionally an existing generator that will be used to create all local variables and labels contained in the result (if not specified, an internal generator is used)</param>
+            <returns>A list containing all the original CodeInstructions</returns>
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.GetOriginalInstructions(System.Reflection.MethodBase,System.Reflection.Emit.ILGenerator@)">
+            <summary>Returns the methods unmodified list of CodeInstructions</summary>
+            <param name="original">The original method</param>
+            <param name="generator">A new generator that now contains all local variables and labels contained in the result</param>
+            <returns>A list containing all the original CodeInstructions</returns>
+        </member>
         <member name="M:HarmonyLib.PatchProcessor.AllPatchedMethods">
+             <summary>Gets all patched original methods</summary>
+             <returns>All patched original methods</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.PatchProcessor.GetAllPatchedMethods">
              <summary>Gets all patched original methods</summary>
              <returns>All patched original methods</returns>
             
@@ -1165,418 +1037,25 @@
              <param name="patch">The patch</param>
             
         </member>
-        <member name="T:HarmonyLib.Priority">
-            <summary>A patch priority</summary>
+        <member name="M:HarmonyLib.PatchProcessor.GetOriginalMethod(HarmonyLib.HarmonyMethod)">
+            <summary>
+            Get the member specified by the <paramref name="attribute"/>. Throws if the member was not found.
+            </summary>
+            <exception cref="T:System.ArgumentException">Thrown if the member described in the <paramref name="attribute"/> couldn't be found.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="attribute"/> is <see langword="null"/></exception>
         </member>
-        <member name="F:HarmonyLib.Priority.Last">
-            <summary>Patch last</summary>
+        <member name="T:HarmonyLib.ReversePatcher">
+            <summary>A reverse patcher</summary>
         </member>
-        <member name="F:HarmonyLib.Priority.VeryLow">
-            <summary>Patch with very low priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.Low">
-            <summary>Patch with low priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.LowerThanNormal">
-            <summary>Patch with lower than normal priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.Normal">
-            <summary>Patch with normal priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.HigherThanNormal">
-            <summary>Patch with higher than normal priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.High">
-            <summary>Patch with high priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.VeryHigh">
-            <summary>Patch with very high priority</summary>
-        </member>
-        <member name="F:HarmonyLib.Priority.First">
-            <summary>Patch first</summary>
-        </member>
-        <member name="T:HarmonyLib.Transpilers">
-            <summary>A collection of commonly used transpilers</summary>
-        </member>
-        <member name="M:HarmonyLib.Transpilers.MethodReplacer(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase,System.Reflection.MethodBase)">
-             <summary>A transpiler that replaces all occurrences of a given method with another one</summary>
-             <param name="instructions">The instructions to act on</param>
-             <param name="from">Method or constructor to search for</param>
-             <param name="to">Method or constructor to replace with</param>
-             <returns>Modified instructions</returns>
+        <member name="M:HarmonyLib.ReversePatcher.#ctor(HarmonyLib.Harmony,System.Reflection.MethodBase,System.Reflection.MethodInfo)">
+             <summary>Creates an empty reverse patcher</summary>
+             <param name="instance">The Harmony instance</param>
+             <param name="original">The original method</param>
+             <param name="standin">The stand-in method</param>
             
         </member>
-        <member name="M:HarmonyLib.Transpilers.DebugLogger(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.String)">
-             <summary>A transpiler that logs a text at the beginning of the method</summary>
-             <param name="instructions">The instructions to act on</param>
-             <param name="text">The log text</param>
-             <returns>Modified instructions</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.AccessTools">
-            <summary>A helper class for reflection related functions</summary>
-        </member>
-        <member name="F:HarmonyLib.AccessTools.all">
-            <summary>Shortcut to simplify the use of reflections and make it work for any access level</summary>
-        </member>
-        <member name="F:HarmonyLib.AccessTools.allDeclared">
-            <summary>Shortcut to simplify the use of reflections and make it work for any access level but only within the current type</summary>
-        </member>
-        <member name="M:HarmonyLib.AccessTools.TypeByName(System.String)">
-             <summary>Gets a type by name. Prefers a full name with namespace but falls back to the first type matching the name otherwise</summary>
-             <param name="name">The name</param>
-             <returns>A Type</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FindIncludingBaseTypes``1(System.Type,System.Func{System.Type,``0})">
-             <summary>Applies a function going up the type hierarchy and stops at the first non null result</summary>
-             <typeparam name="T">Result type of func()</typeparam>
-             <param name="type">The type to start with</param>
-             <param name="func">The evaluation function returning T</param>
-             <returns>Returns the first non null result or default(T) when reaching the top level type object</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FindIncludingInnerTypes``1(System.Type,System.Func{System.Type,``0})">
-             <summary>Applies a function going into inner types and stops at the first non null result</summary>
-             <typeparam name="T">Generic type parameter</typeparam>
-             <param name="type">The type to start with</param>
-             <param name="func">The evaluation function returning T</param>
-             <returns>Returns the first non null result or null with no match</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredField(System.Type,System.String)">
-             <summary>Gets the reflection information for a directly declared field</summary>
-             <param name="type">The class where the field is defined</param>
-             <param name="name">The name of the field</param>
-             <returns>A FieldInfo or null when type/name is null or when the field cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Field(System.Type,System.String)">
-             <summary>Gets the reflection information for a field by searching the type and all its super types</summary>
-             <param name="type">The class where the field is defined</param>
-             <param name="name">The name of the field (case sensitive)</param>
-             <returns>A FieldInfo or null when type/name is null or when the field cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredField(System.Type,System.Int32)">
-             <summary>Gets the reflection information for a field</summary>
-             <param name="type">The class where the field is declared</param>
-             <param name="idx">The zero-based index of the field inside the class definition</param>
-             <returns>A FieldInfo or null when type is null or when the field cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredProperty(System.Type,System.String)">
-             <summary>Gets the reflection information for a directly declared property</summary>
-             <param name="type">The class where the property is declared</param>
-             <param name="name">The name of the property (case sensitive)</param>
-             <returns>A PropertyInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredPropertyGetter(System.Type,System.String)">
-             <summary>Gets the reflection information for the getter method of a directly declared property</summary>
-             <param name="type">The class where the property is declared</param>
-             <param name="name">The name of the property (case sensitive)</param>
-             <returns>A MethodInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredPropertySetter(System.Type,System.String)">
-             <summary>Gets the reflection information for the setter method of a directly declared property</summary>
-             <param name="type">The class where the property is declared</param>
-             <param name="name">The name of the property (case sensitive)</param>
-             <returns>A MethodInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Property(System.Type,System.String)">
-             <summary>Gets the reflection information for a property by searching the type and all its super types</summary>
-             <param name="type">The type</param>
-             <param name="name">The name</param>
-             <returns>A PropertyInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.PropertyGetter(System.Type,System.String)">
-             <summary>Gets the reflection information for the getter method of a property by searching the type and all its super types</summary>
-             <param name="type">The type</param>
-             <param name="name">The name</param>
-             <returns>A MethodInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.PropertySetter(System.Type,System.String)">
-             <summary>Gets the reflection information for the setter method of a property by searching the type and all its super types</summary>
-             <param name="type">The type</param>
-             <param name="name">The name</param>
-             <returns>A MethodInfo or null when type/name is null or when the property cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredMethod(System.Type,System.String,System.Type[],System.Type[])">
-             <summary>Gets the reflection information for a directly declared method</summary>
-             <param name="type">The class where the method is declared</param>
-             <param name="name">The name of the method (case sensitive)</param>
-             <param name="parameters">Optional parameters to target a specific overload of the method</param>
-             <param name="generics">Optional list of types that define the generic version of the method</param>
-             <returns>A MethodInfo or null when type/name is null or when the method cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Method(System.Type,System.String,System.Type[],System.Type[])">
-             <summary>Gets the reflection information for a method by searching the type and all its super types</summary>
-             <param name="type">The class where the method is declared</param>
-             <param name="name">The name of the method (case sensitive)</param>
-             <param name="parameters">Optional parameters to target a specific overload of the method</param>
-             <param name="generics">Optional list of types that define the generic version of the method</param>
-             <returns>A MethodInfo or null when type/name is null or when the method cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Method(System.String,System.Type[],System.Type[])">
-             <summary>Gets the reflection information for a method by searching the type and all its super types</summary>
-             <param name="typeColonMethodname">The full name (Namespace.Type1.Type2:MethodName) of the type where the method is declared</param>
-             <param name="parameters">Optional parameters to target a specific overload of the method</param>
-             <param name="generics">Optional list of types that define the generic version of the method</param>
-             <returns>A MethodInfo or null when type/name is null or when the method cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetMethodNames(System.Type)">
-             <summary>Gets the names of all method that are declared in a type</summary>
-             <param name="type">The declaring type</param>
-             <returns>A list of method names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetMethodNames(System.Object)">
-             <summary>Gets the names of all method that are declared in the type of the instance</summary>
-             <param name="instance">An instance of the type to search in</param>
-             <returns>A list of method names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetFieldNames(System.Type)">
-             <summary>Gets the names of all fields that are declared in a type</summary>
-             <param name="type">The declaring type</param>
-             <returns>A list of field names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetFieldNames(System.Object)">
-             <summary>Gets the names of all fields that are declared in the type of the instance</summary>
-             <param name="instance">An instance of the type to search in</param>
-             <returns>A list of field names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetPropertyNames(System.Type)">
-             <summary>Gets the names of all properties that are declared in a type</summary>
-             <param name="type">The declaring type</param>
-             <returns>A list of property names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetPropertyNames(System.Object)">
-             <summary>Gets the names of all properties that are declared in the type of the instance</summary>
-             <param name="instance">An instance of the type to search in</param>
-             <returns>A list of property names</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetUnderlyingType(System.Reflection.MemberInfo)">
-             <summary>Gets the type of any member of a class</summary>
-             <param name="member">An EventInfo, FieldInfo, MethodInfo, or PropertyInfo</param>
-             <returns>The type that represents the output of this member</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.DeclaredConstructor(System.Type,System.Type[])">
-             <summary>Gets the reflection information for a directly declared constructor</summary>
-             <param name="type">The class where the constructor is declared</param>
-             <param name="parameters">Optional parameters to target a specific overload of the constructor</param>
-             <returns>A ConstructorInfo or null when type is null or when the constructor cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Constructor(System.Type,System.Type[])">
-             <summary>Gets the reflection information for a constructor by searching the type and all its super types</summary>
-             <param name="type">The class where the constructor is declared</param>
-             <param name="parameters">Optional parameters to target a specific overload of the method</param>
-             <returns>A ConstructorInfo or null when type is null or when the method cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetDeclaredConstructors(System.Type)">
-             <summary>Gets reflection information for all declared constructors</summary>
-             <param name="type">The class where the constructors are declared</param>
-             <returns>A list of ConstructorInfo</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetDeclaredMethods(System.Type)">
-             <summary>Gets reflection information for all declared methods</summary>
-             <param name="type">The class where the methods are declared</param>
-             <returns>A list of MethodInfo</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetDeclaredProperties(System.Type)">
-             <summary>Gets reflection information for all declared properties</summary>
-             <param name="type">The class where the properties are declared</param>
-             <returns>A list of PropertyInfo</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetDeclaredFields(System.Type)">
-             <summary>Gets reflection information for all declared fields</summary>
-             <param name="type">The class where the fields are declared</param>
-             <returns>A list of FieldInfo</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetReturnedType(System.Reflection.MethodBase)">
-             <summary>Gets the return type of a method or constructor</summary>
-             <param name="methodOrConstructor">The method or constructor</param>
-             <returns>The return type of the method</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.Inner(System.Type,System.String)">
-             <summary>Given a type, returns the first inner type matching a recursive search by name</summary>
-             <param name="type">The type to start searching at</param>
-             <param name="name">The name of the inner type (case sensitive)</param>
-             <returns>The inner type or null if type/name is null or if a type with that name cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FirstInner(System.Type,System.Func{System.Type,System.Boolean})">
-             <summary>Given a type, returns the first inner type matching a recursive search with a predicate</summary>
-             <param name="type">The type to start searching at</param>
-             <param name="predicate">The predicate to search with</param>
-             <returns>The inner type or null if type/predicate is null or if a type with that name cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FirstMethod(System.Type,System.Func{System.Reflection.MethodInfo,System.Boolean})">
-             <summary>Given a type, returns the first method matching a predicate</summary>
-             <param name="type">The type to start searching at</param>
-             <param name="predicate">The predicate to search with</param>
-             <returns>The MethodInfo or null if type/predicate is null or if a type with that name cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FirstConstructor(System.Type,System.Func{System.Reflection.ConstructorInfo,System.Boolean})">
-             <summary>Given a type, returns the first constructor matching a predicate</summary>
-             <param name="type">The type to start searching at</param>
-             <param name="predicate">The predicate to search with</param>
-             <returns>The ConstructorInfo or null if type/predicate is null or if a type with that name cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FirstProperty(System.Type,System.Func{System.Reflection.PropertyInfo,System.Boolean})">
-             <summary>Given a type, returns the first property matching a predicate</summary>
-             <param name="type">The type to start searching at</param>
-             <param name="predicate">The predicate to search with</param>
-             <returns>The PropertyInfo or null if type/predicate is null or if a type with that name cannot be found</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetTypes(System.Object[])">
-             <summary>Returns an array containing the type of each object in the given array</summary>
-             <param name="parameters">An array of objects</param>
-             <returns>An array of types or an empty array if parameters is null (if an object is null, the type for it will be object)</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.ActualParameters(System.Reflection.MethodBase,System.Object[])">
-             <summary>Creates an array of input parameters for a given method and a given set of potential inputs</summary>
-             <param name="method">The method you are planing to call</param>
-             <param name="inputs"> The possible input parameters in any order</param>
-             <returns>An object array matching the method signature</returns>
-            
-        </member>
-        <member name="T:HarmonyLib.AccessTools.FieldRef`2">
-             <summary>A read/writable reference to a field</summary>
-             <typeparam name="T">The class the field is defined in</typeparam>
-             <typeparam name="U">The type of the field</typeparam>
-             <param name="obj">The runtime instance to access the field (leave empty for static fields)</param>
-             <returns>The value of the field (or an assignable object)</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(System.String)">
-             <summary>Creates a field reference</summary>
-             <typeparam name="T">The class the field is defined in</typeparam>
-             <typeparam name="U">The type of the field</typeparam>
-             <param name="fieldName">The name of the field</param>
-             <returns>A read and writable field reference</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(System.Reflection.FieldInfo)">
-             <summary>Creates a field reference</summary>
-             <typeparam name="T">The class the field is defined in or "object" if type cannot be accessed at compile time</typeparam>
-             <typeparam name="U">The type of the field</typeparam>
-             <param name="fieldInfo">FieldInfo for the field</param>
-             <returns>A read and writable field reference</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(``0,System.String)">
-             <summary>Creates a field reference for a specific instance</summary>
-             <typeparam name="T">The class the field is defined in</typeparam>
-             <typeparam name="U">The type of the field</typeparam>
-             <param name="instance">The instance</param>
-             <param name="fieldName">The name of the field</param>
-             <returns>A read and writable field reference</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetOutsideCaller">
-             <summary>Returns who called the current method</summary>
-             <returns>The calling method (excluding the current method)</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.ThrowMissingMemberException(System.Type,System.String[])">
-             <summary>Throws a missing member runtime exception</summary>
-             <param name="type">The class that is involved</param>
-             <param name="names">A list of names</param>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.GetDefaultValue(System.Type)">
-             <summary>Gets default value for a specific type</summary>
-             <param name="type">The type</param>
-             <returns>The default value</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.CreateInstance(System.Type)">
-             <summary>Creates an (possibly uninitialized) instance of a given type</summary>
-             <param name="type">The type</param>
-             <returns>The new instance</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy``1(System.Object)">
-             <summary>Makes a deep copy of any object</summary>
-             <typeparam name="T">The type of the instance that should be created</typeparam>
-             <param name="source">The original object</param>
-             <returns>A copy of the original object but of type T</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy``1(System.Object,``0@,System.Func{System.String,HarmonyLib.Traverse,HarmonyLib.Traverse,System.Object},System.String)">
-             <summary>Makes a deep copy of any object</summary>
-             <typeparam name="T">The type of the instance that should be created</typeparam>
-             <param name="source">The original object</param>
-             <param name="result">[out] The copy of the original object</param>
-             <param name="processor">Optional value transformation function (taking a field name and src/dst traverse objects)</param>
-             <param name="pathRoot">The optional path root to start with</param>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy(System.Object,System.Type,System.Func{System.String,HarmonyLib.Traverse,HarmonyLib.Traverse,System.Object},System.String)">
-             <summary>Makes a deep copy of any object</summary>
-             <param name="source">The original object</param>
-             <param name="resultType">The type of the instance that should be created</param>
-             <param name="processor">Optional value transformation function (taking a field name and src/dst traverse objects)</param>
-             <param name="pathRoot">The optional path root to start with</param>
-             <returns>The copy of the original object</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.IsStruct(System.Type)">
-             <summary>Tests if a type is a struct</summary>
-             <param name="type">The type</param>
-             <returns>True if the type is a struct</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.IsClass(System.Type)">
-             <summary>Tests if a type is a class</summary>
-             <param name="type">The type</param>
-             <returns>True if the type is a class</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.IsValue(System.Type)">
-             <summary>Tests if a type is a value type</summary>
-             <param name="type">The type</param>
-             <returns>True if the type is a value type</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.IsVoid(System.Type)">
-             <summary>Tests if a type is void</summary>
-             <param name="type">The type</param>
-             <returns>True if the type is void</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.AccessTools.IsOfNullableType``1(``0)">
-             <summary>Test whether an instance is of a nullable type</summary>
-             <typeparam name="T">Type of instance</typeparam>
-             <param name="instance">An instance to test</param>
-             <returns>True if instance is of nullable type, false if not</returns>
+        <member name="M:HarmonyLib.ReversePatcher.Patch(HarmonyLib.HarmonyReversePatchType)">
+             <summary>Applies the patch</summary>
             
         </member>
         <member name="T:HarmonyLib.CodeMatch">
@@ -1705,6 +1184,11 @@
         </member>
         <member name="M:HarmonyLib.CodeMatcher.Instructions">
              <summary>Gets all instructions</summary>
+             <returns>A list of instructions</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeMatcher.InstructionEnumeration">
+             <summary>Gets all instructions as an enumeration</summary>
              <returns>A list of instructions</returns>
             
         </member>
@@ -1931,6 +1415,219 @@
              <returns>An instruction</returns>
             
         </member>
+        <member name="T:HarmonyLib.CodeInstructionExtensions">
+             <summary>Extensions for <see cref="T:HarmonyLib.CodeInstruction"/></summary>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.OperandIs(HarmonyLib.CodeInstruction,System.Object)">
+             <summary>Shortcut for testing whether the operand is equal to a non-null value</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="value">The value</param>
+             <returns>True if the operand has the same type and is equal to the value</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.Is(HarmonyLib.CodeInstruction,System.Reflection.Emit.OpCode,System.Object)">
+             <summary>Shortcut for <code>code.opcode == opcode &amp;&amp; code.OperandIs(operand)</code></summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="opcode">The <see cref="T:System.Reflection.Emit.OpCode"/></param>
+             <param name="operand">The operand value</param>
+             <returns>True if the opcode is equal to the given opcode and the operand has the same type and is equal to the given operand</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.IsLdarg(HarmonyLib.CodeInstruction,System.Nullable{System.Int32})">
+             <summary>Tests for any form of Ldarg*</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="n">The (optional) index</param>
+             <returns>True if it matches one of the variations</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.IsLdarga(HarmonyLib.CodeInstruction,System.Nullable{System.Int32})">
+             <summary>Tests for Ldarga/Ldarga_S</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="n">The (optional) index</param>
+             <returns>True if it matches one of the variations</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.IsStarg(HarmonyLib.CodeInstruction,System.Nullable{System.Int32})">
+             <summary>Tests for Starg/Starg_S</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="n">The (optional) index</param>
+             <returns>True if it matches one of the variations</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.IsLdloc(HarmonyLib.CodeInstruction,System.Reflection.Emit.LocalBuilder)">
+             <summary>Tests for any form of Ldloc*</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="variable">The optional local variable</param>
+             <returns>True if it matches one of the variations</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.IsStloc(HarmonyLib.CodeInstruction,System.Reflection.Emit.LocalBuilder)">
+             <summary>Tests for any form of Stloc*</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="variable">The optional local variable</param>
+             <returns>True if it matches one of the variations</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.Branches(HarmonyLib.CodeInstruction,System.Nullable{System.Reflection.Emit.Label}@)">
+             <summary>Tests if the code instruction branches</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="label">The label if the instruction is a branch operation or <see langword="null"/> if not</param>
+             <returns>True if the instruction branches</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.Calls(HarmonyLib.CodeInstruction,System.Reflection.MethodInfo)">
+             <summary>Tests if the code instruction calls the method/constructor</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="method">The method</param>
+             <returns>True if the instruction calls the method or constructor</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.LoadsConstant(HarmonyLib.CodeInstruction)">
+             <summary>Tests if the code instruction loads a constant</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <returns>True if the instruction loads a constant</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.LoadsConstant(HarmonyLib.CodeInstruction,System.Int64)">
+             <summary>Tests if the code instruction loads an integer constant</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="number">The integer constant</param>
+             <returns>True if the instruction loads the constant</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.LoadsConstant(HarmonyLib.CodeInstruction,System.Double)">
+             <summary>Tests if the code instruction loads a floating point constant</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="number">The floating point constant</param>
+             <returns>True if the instruction loads the constant</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.LoadsConstant(HarmonyLib.CodeInstruction,System.Enum)">
+             <summary>Tests if the code instruction loads an enum constant</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="e">The enum</param>
+             <returns>True if the instruction loads the constant</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.LoadsField(HarmonyLib.CodeInstruction,System.Reflection.FieldInfo,System.Boolean)">
+             <summary>Tests if the code instruction loads a field</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="field">The field</param>
+             <param name="byAddress">Set to true if the address of the field is loaded</param>
+             <returns>True if the instruction loads the field</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.StoresField(HarmonyLib.CodeInstruction,System.Reflection.FieldInfo)">
+             <summary>Tests if the code instruction stores a field</summary>
+             <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+             <param name="field">The field</param>
+             <returns>True if the instruction stores this field</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.WithLabels(HarmonyLib.CodeInstruction,System.Reflection.Emit.Label[])">
+            <summary>Adds labels to the code instruction and return it</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <param name="labels">One or several <see cref="T:System.Reflection.Emit.Label"/> to add</param>
+            <returns>The same code instruction</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.WithLabels(HarmonyLib.CodeInstruction,System.Collections.Generic.IEnumerable{System.Reflection.Emit.Label})">
+            <summary>Adds labels to the code instruction and return it</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <param name="labels">An enumeration of <see cref="T:System.Reflection.Emit.Label"/></param>
+            <returns>The same code instruction</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.ExtractLabels(HarmonyLib.CodeInstruction)">
+            <summary>Extracts all labels from the code instruction and returns them</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <returns>A list of <see cref="T:System.Reflection.Emit.Label"/></returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.MoveLabelsTo(HarmonyLib.CodeInstruction,HarmonyLib.CodeInstruction)">
+            <summary>Moves all labels from the code instruction to a different one</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the labels from</param>
+            <param name="other">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the labels to</param>
+            <returns>The code instruction labels were moved from (now empty)</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.MoveLabelsFrom(HarmonyLib.CodeInstruction,HarmonyLib.CodeInstruction)">
+            <summary>Moves all labels from a different code instruction to the current one</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the labels from</param>
+            <param name="other">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the labels to</param>
+            <returns>The code instruction that received the labels</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.WithBlocks(HarmonyLib.CodeInstruction,HarmonyLib.ExceptionBlock[])">
+            <summary>Adds ExceptionBlocks to the code instruction and return it</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <param name="blocks">One or several <see cref="T:HarmonyLib.ExceptionBlock"/> to add</param>
+            <returns>The same code instruction</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.WithBlocks(HarmonyLib.CodeInstruction,System.Collections.Generic.IEnumerable{HarmonyLib.ExceptionBlock})">
+            <summary>Adds ExceptionBlocks to the code instruction and return it</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <param name="blocks">An enumeration of <see cref="T:HarmonyLib.ExceptionBlock"/></param>
+            <returns>The same code instruction</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.ExtractBlocks(HarmonyLib.CodeInstruction)">
+            <summary>Extracts all ExceptionBlocks from the code instruction and returns them</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/></param>
+            <returns>A list of <see cref="T:HarmonyLib.ExceptionBlock"/></returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.MoveBlocksTo(HarmonyLib.CodeInstruction,HarmonyLib.CodeInstruction)">
+            <summary>Moves all ExceptionBlocks from the code instruction to a different one</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the ExceptionBlocks from</param>
+            <param name="other">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the ExceptionBlocks to</param>
+            <returns>The code instruction blocks were moved from (now empty)</returns>
+        </member>
+        <member name="M:HarmonyLib.CodeInstructionExtensions.MoveBlocksFrom(HarmonyLib.CodeInstruction,HarmonyLib.CodeInstruction)">
+            <summary>Moves all ExceptionBlocks from a different code instruction to the current one</summary>
+            <param name="code">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the ExceptionBlocks from</param>
+            <param name="other">The <see cref="T:HarmonyLib.CodeInstruction"/> to move the ExceptionBlocks to</param>
+            <returns>The code instruction that received the blocks</returns>
+        </member>
+        <member name="T:HarmonyLib.CollectionExtensions">
+            <summary>General extensions for collections</summary>
+        </member>
+        <member name="M:HarmonyLib.CollectionExtensions.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+             <summary>A simple way to execute code for every element in a collection</summary>
+             <typeparam name="T">The inner type of the collection</typeparam>
+             <param name="sequence">The collection</param>
+             <param name="action">The action to execute</param>
+            
+        </member>
+        <member name="M:HarmonyLib.CollectionExtensions.DoIf``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Action{``0})">
+             <summary>A simple way to execute code for elements in a collection matching a condition</summary>
+             <typeparam name="T">The inner type of the collection</typeparam>
+             <param name="sequence">The collection</param>
+             <param name="condition">The predicate</param>
+             <param name="action">The action to execute</param>
+            
+        </member>
+        <member name="M:HarmonyLib.CollectionExtensions.AddItem``1(System.Collections.Generic.IEnumerable{``0},``0)">
+             <summary>A helper to add an item to a collection</summary>
+             <typeparam name="T">The inner type of the collection</typeparam>
+             <param name="sequence">The collection</param>
+             <param name="item">The item to add</param>
+             <returns>The collection containing the item</returns>
+             
+             Note: this was called 'Add' before but that led to unwanted side effect
+                   See https://github.com/pardeike/Harmony/issues/147
+            
+        </member>
+        <member name="M:HarmonyLib.CollectionExtensions.AddToArray``1(``0[],``0)">
+             <summary>A helper to add an item to an array</summary>
+             <typeparam name="T">The inner type of the collection</typeparam>
+             <param name="sequence">The array</param>
+             <param name="item">The item to add</param>
+             <returns>The array containing the item</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CollectionExtensions.AddRangeToArray``1(``0[],``0[])">
+             <summary>A helper to add items to an array</summary>
+             <typeparam name="T">The inner type of the collection</typeparam>
+             <param name="sequence">The array</param>
+             <param name="items">The items to add</param>
+             <returns>The array containing the items</returns>
+            
+        </member>
         <member name="T:HarmonyLib.GeneralExtensions">
             <summary>General extensions for common cases</summary>
         </member>
@@ -1984,49 +1681,45 @@
              <returns>The value for the key or the default value (of T) if that key does not exist or cannot be cast to T</returns>
             
         </member>
-        <member name="T:HarmonyLib.CollectionExtensions">
-            <summary>General extensions for collections</summary>
+        <member name="T:HarmonyLib.PatchSortExtensions">
+            <summary>
+            Extensions for patch sorting
+            </summary>
         </member>
-        <member name="M:HarmonyLib.CollectionExtensions.Do``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
-             <summary>A simple way to execute code for every element in a collection</summary>
-             <typeparam name="T">The inner type of the collection</typeparam>
-             <param name="sequence">The collection</param>
-             <param name="action">The action to execute</param>
+        <member name="M:HarmonyLib.PatchSortExtensions.Sort(HarmonyLib.Patch[],System.Reflection.MethodBase)">
+            <summary>Gets sorted patch methods</summary>
+            <param name="original">The original method</param>
+            <param name="patches">Patches to sort</param>
+            <returns>The sorted patch methods</returns>
+        </member>
+        <member name="T:HarmonyLib.SymbolExtensions">
+            <summary>A helper class to retrieve reflection info for non-private methods</summary>
+        </member>
+        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo(System.Linq.Expressions.Expression{System.Action})">
+             <summary>Given a lambda expression that calls a method, returns the method info</summary>
+             <param name="expression">The lambda expression using the method</param>
+             <returns>The MethodInfo for the method in the lambda expression</returns>
             
         </member>
-        <member name="M:HarmonyLib.CollectionExtensions.DoIf``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Action{``0})">
-             <summary>A simple way to execute code for elements in a collection matching a condition</summary>
-             <typeparam name="T">The inner type of the collection</typeparam>
-             <param name="sequence">The collection</param>
-             <param name="condition">The predicate</param>
-             <param name="action">The action to execute</param>
+        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo``1(System.Linq.Expressions.Expression{System.Action{``0}})">
+             <summary>Given a lambda expression that calls a method, returns the method info</summary>
+             <typeparam name="T"></typeparam>
+             <param name="expression">The lambda expression using the method</param>
+             <returns>The MethodInfo for the method in the lambda expression</returns>
             
         </member>
-        <member name="M:HarmonyLib.CollectionExtensions.AddItem``1(System.Collections.Generic.IEnumerable{``0},``0)">
-             <summary>A helper to add an item to a collection</summary>
-             <typeparam name="T">The inner type of the collection</typeparam>
-             <param name="sequence">The collection</param>
-             <param name="item">The item to add</param>
-             <returns>The collection containing the item</returns>
-             
-             Note: this was called 'Add' before but that led to unwanted side effect
-                   See https://github.com/pardeike/Harmony/issues/147
+        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+             <summary>Given a lambda expression that calls a method, returns the method info</summary>
+             <typeparam name="T"></typeparam>
+             <typeparam name="TResult"></typeparam>
+             <param name="expression">The lambda expression using the method</param>
+             <returns>The MethodInfo for the method in the lambda expression</returns>
             
         </member>
-        <member name="M:HarmonyLib.CollectionExtensions.AddToArray``1(``0[],``0)">
-             <summary>A helper to add an item to an array</summary>
-             <typeparam name="T">The inner type of the collection</typeparam>
-             <param name="sequence">The array</param>
-             <param name="item">The item to add</param>
-             <returns>The array containing the item</returns>
-            
-        </member>
-        <member name="M:HarmonyLib.CollectionExtensions.AddRangeToArray``1(``0[],``0[])">
-             <summary>A helper to add items to an array</summary>
-             <typeparam name="T">The inner type of the collection</typeparam>
-             <param name="sequence">The array</param>
-             <param name="items">The items to add</param>
-             <returns>The array containing the items</returns>
+        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo(System.Linq.Expressions.LambdaExpression)">
+             <summary>Given a lambda expression that calls a method, returns the method info</summary>
+             <param name="expression">The lambda expression using the method</param>
+             <returns>The MethodInfo for the method in the lambda expression</returns>
             
         </member>
         <member name="T:HarmonyLib.FileLog">
@@ -2089,34 +1782,666 @@
              <param name="len">The length of bytes to log</param>
             
         </member>
-        <member name="T:HarmonyLib.SymbolExtensions">
-            <summary>A helper class to retrieve reflection info for non-private methods</summary>
+        <member name="T:HarmonyLib.Tools.HarmonyFileLog">
+            <summary>
+            Default Harmony logger that writes to a file
+            </summary>
         </member>
-        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo(System.Linq.Expressions.Expression{System.Action})">
-             <summary>Given a lambda expression that calls a method, returns the method info</summary>
-             <param name="expression">The lambda expression using the method</param>
-             <returns>The MethodInfo for the method in the lambda expression</returns>
+        <member name="P:HarmonyLib.Tools.HarmonyFileLog.Enabled">
+            <summary>
+            Whether or not to enable writing the log.
+            </summary>
+        </member>
+        <member name="P:HarmonyLib.Tools.HarmonyFileLog.Writer">
+            <summary>
+            Text writer to write the logs to. If not set, defaults to a file log.
+            </summary>
+        </member>
+        <member name="P:HarmonyLib.Tools.HarmonyFileLog.FileWriterPath">
+            <summary>
+            File path of the log.
+            </summary>
+        </member>
+        <member name="T:HarmonyLib.Tools.Logger">
+            <summary>
+            Main logger class that exposes log events.
+            </summary>
+        </member>
+        <member name="T:HarmonyLib.Tools.Logger.LogEventArgs">
+            <summary>
+            A single log event that represents a single log message.
+            </summary>
+        </member>
+        <member name="P:HarmonyLib.Tools.Logger.LogEventArgs.LogChannel">
+            <summary>
+            Log channel of the message.
+            </summary>
+        </member>
+        <member name="P:HarmonyLib.Tools.Logger.LogEventArgs.Message">
+            <summary>
+            The log message.
+            </summary>
+        </member>
+        <member name="T:HarmonyLib.Tools.Logger.LogChannel">
+            <summary>
+            Log channel for the messages.
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.None">
+            <summary>
+            No channels (or an empty channel).
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.Info">
+            <summary>
+            Basic information.
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.IL">
+            <summary>
+            Full IL dumps of the generated dynamic methods.
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.Warn">
+            <summary>
+            Channel for warnings.
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.Error">
+            <summary>
+            Channel for errors.
+            </summary>
+        </member>
+        <member name="F:HarmonyLib.Tools.Logger.LogChannel.All">
+            <summary>
+            All channels.
+            </summary>
+        </member>
+        <member name="P:HarmonyLib.Tools.Logger.ChannelFilter">
+            <summary>
+            Filter for which channels should be listened to.
+            If the channel is in the filter, all log messages from that channel get propagated into <see cref="E:HarmonyLib.Tools.Logger.MessageReceived"/> event.
+            </summary>
+        </member>
+        <member name="E:HarmonyLib.Tools.Logger.MessageReceived">
+            <summary>
+            Event fired on any incoming message that passes the channel filter.
+            </summary>
+        </member>
+        <member name="T:HarmonyLib.AccessTools">
+            <summary>A helper class for reflection related functions</summary>
+        </member>
+        <member name="F:HarmonyLib.AccessTools.all">
+            <summary>Shortcut for <see cref="T:System.Reflection.BindingFlags"/> to simplify the use of reflections and make it work for any access level</summary>
+        </member>
+        <member name="F:HarmonyLib.AccessTools.allDeclared">
+            <summary>Shortcut for <see cref="T:System.Reflection.BindingFlags"/> to simplify the use of reflections and make it work for any access level but only within the current type</summary>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.TypeByName(System.String)">
+            <summary>Gets a type by name. Prefers a full name with namespace but falls back to the first type matching the name otherwise</summary>
+            <param name="name">The name of the type, either fully qualified name or just name</param>
+            <returns>A <see cref="T:System.Type"/> if found, null otherwise</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FindIncludingBaseTypes``1(System.Type,System.Func{System.Type,``0})">
+            <summary>Applies a function going up the type hierarchy and stops at the first non null result</summary>
+            <typeparam name="T">Result type of func()</typeparam>
+            <param name="type">The type to start with</param>
+            <param name="func">The evaluation function returning T</param>
+            <returns>Returns the first non null result or default(T) when reaching the top level type object</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FindIncludingInnerTypes``1(System.Type,System.Func{System.Type,``0})">
+            <summary>Applies a function going into inner types and stops at the first non null result</summary>
+            <typeparam name="T">Generic type parameter</typeparam>
+            <param name="type">The type to start with</param>
+            <param name="func">The evaluation function returning T</param>
+            <returns>Returns the first non null result or null with no match</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredField(System.Type,System.String)">
+            <summary>Gets the reflection information for a directly declared field</summary>
+            <param name="type">The type where the field is defined</param>
+            <param name="name">The name of the field</param>
+            <returns>A <see cref="T:System.Reflection.FieldInfo"/> if field found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Field(System.Type,System.String)">
+            <summary>Gets the reflection information for a field by searching the type and all its super types</summary>
+            <param name="type">The type where the field is defined</param>
+            <param name="name">The name of the field (case sensitive)</param>
+            <returns>A <see cref="T:System.Reflection.FieldInfo"/> if field found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredField(System.Type,System.Int32)">
+            <summary>Gets the reflection information for a field</summary>
+            <param name="type">The type where the field is declared</param>
+            <param name="idx">The zero-based index of the field inside The type definition</param>
+            <returns>A <see cref="T:System.Reflection.FieldInfo"/> if field found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredProperty(System.Type,System.String)">
+            <summary>Gets the reflection information for a directly declared property</summary>
+            <param name="type">The type where the property is declared</param>
+            <param name="name">The name of the property (case sensitive)</param>
+            <returns>A <see cref="T:System.Reflection.PropertyInfo"/> if property found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredPropertyGetter(System.Type,System.String)">
+            <summary>Gets the reflection information for the getter method of a directly declared property</summary>
+            <param name="type">The type where the property is declared</param>
+            <param name="name">The name of the property (case sensitive)</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredPropertySetter(System.Type,System.String)">
+            <summary>Gets the reflection information for the setter method of a directly declared property</summary>
+            <param name="type">The type where the property is declared</param>
+            <param name="name">The name of the property (case sensitive)</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Property(System.Type,System.String)">
+            <summary>Gets the reflection information for a property by searching the type and all its super types</summary>
+            <param name="type">The type</param>
+            <param name="name">The name of the property</param>
+            <returns>A <see cref="T:System.Reflection.PropertyInfo"/> if property found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.PropertyGetter(System.Type,System.String)">
+            <summary>Gets the reflection information for the getter method of a property by searching the type and all its super types</summary>
+            <param name="type">The type</param>
+            <param name="name">The name of the property</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> of the property getter if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.PropertySetter(System.Type,System.String)">
+            <summary>Gets the reflection information for the setter method of a property by searching the type and all its super types</summary>
+            <param name="type">The type</param>
+            <param name="name">The name</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> of the property setter if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredMethod(System.Type,System.String,System.Type[],System.Type[])">
+            <summary>Gets the reflection information for a directly declared method</summary>
+            <param name="type">The type where the method is declared</param>
+            <param name="name">The name of the method (case sensitive)</param>
+            <param name="parameters">Optional parameters to target a specific overload of the method</param>
+            <param name="generics">Optional list of types that define the generic version of the method</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Method(System.Type,System.String,System.Type[],System.Type[])">
+            <summary>Gets the reflection information for a method by searching the type and all its super types</summary>
+            <param name="type">The type where the method is declared</param>
+            <param name="name">The name of the method (case sensitive)</param>
+            <param name="parameters">Optional parameters to target a specific overload of the method</param>
+            <param name="generics">Optional list of types that define the generic version of the method</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Method(System.String,System.Type[],System.Type[])">
+            <summary>Gets the reflection information for a method by searching the type and all its super types</summary>
+            <param name="typeColonMethodname">The target method in form <c>Namespace.Type1.Type2:MethodName</c> of the type where the method is declared</param>
+            <param name="parameters">Optional parameters to target a specific overload of the method</param>
+            <param name="generics">Optional list of types that define the generic version of the method</param>
+            <returns>A <see cref="T:System.Reflection.MethodInfo"/> if method found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetMethodNames(System.Type)">
+            <summary>Gets the names of all method that are declared in a type</summary>
+            <param name="type">The declaring type</param>
+            <returns>A list of method names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetMethodNames(System.Object)">
+            <summary>Gets the names of all method that are declared in the type of the instance</summary>
+            <param name="instance">An instance of the type to search in</param>
+            <returns>A list of method names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetFieldNames(System.Type)">
+            <summary>Gets the names of all fields that are declared in a type</summary>
+            <param name="type">The declaring type</param>
+            <returns>A list of field names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetFieldNames(System.Object)">
+            <summary>Gets the names of all fields that are declared in the type of the instance</summary>
+            <param name="instance">An instance of the type to search in</param>
+            <returns>A list of field names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetPropertyNames(System.Type)">
+            <summary>Gets the names of all properties that are declared in a type</summary>
+            <param name="type">The declaring type</param>
+            <returns>A list of property names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetPropertyNames(System.Object)">
+            <summary>Gets the names of all properties that are declared in the type of the instance</summary>
+            <param name="instance">An instance of the type to search in</param>
+            <returns>A list of property names</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetUnderlyingType(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the type of a given member<br/>
+            * For fields and properties, this is the type of the field/property<br/>
+            * For methods, this is the return type of the method<br/>
+            * For event handlers, this is the event handler type
+            </summary>
+            <param name="member">A <see cref="T:System.Reflection.MemberInfo"/> the type of which to get</param>
+            <returns>The type that represents the member</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredConstructor(System.Type,System.Type[])">
+            <summary>Gets the reflection information for a directly declared constructor</summary>
+            <param name="type">The type where the constructor is declared</param>
+            <param name="parameters">Optional parameters to target a specific overload of the constructor</param>
+            <returns>A <see cref="T:System.Reflection.ConstructorInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.DeclaredConstructor(System.Type,System.Type[],System.Boolean)">
+            <summary>Gets the reflection information for a directly declared constructor</summary>
+            <param name="type">The type where the constructor is declared</param>
+            <param name="parameters">Optional parameters to target a specific overload of the constructor</param>
+            <param name="searchForStatic">Optional parameters to only consider static constructors</param>
+            <returns>A <see cref="T:System.Reflection.ConstructorInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Constructor(System.Type,System.Type[])">
+            <summary>Gets the reflection information for a constructor by searching the type and all its super types</summary>
+            <param name="type">The type where the constructor is declared</param>
+            <param name="parameters">Optional parameters to target a specific overload of the method</param>
+            <returns>A <see cref="T:System.Reflection.ConstructorInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Constructor(System.Type,System.Type[],System.Boolean)">
+            <summary>Gets the reflection information for a constructor by searching the type and all its super types</summary>
+            <param name="type">The type where the constructor is declared</param>
+            <param name="parameters">Optional parameters to target a specific overload of the method</param>
+            <param name="searchForStatic">Optional parameters to only consider static constructors</param>
+            <returns>A <see cref="T:System.Reflection.ConstructorInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredConstructors(System.Type)">
+            <summary>Gets reflection information for all declared constructors</summary>
+            <param name="type">The type where the constructors are declared</param>
+            <returns>A list of <see cref="T:System.Reflection.ConstructorInfo"/> declared in the type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredConstructors(System.Type,System.Nullable{System.Boolean})">
+            <summary>Gets reflection information for all declared constructors</summary>
+            <param name="type">The type where the constructors are declared</param>
+            <param name="searchForStatic">Optional parameters to only consider static constructors</param>
+            <returns>A list of <see cref="T:System.Reflection.ConstructorInfo"/> declared in the type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredMethods(System.Type)">
+            <summary>Gets reflection information for all declared methods</summary>
+            <param name="type">The type where the methods are declared</param>
+            <returns>A list of <see cref="T:System.Reflection.MethodInfo"/> declared in the type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredProperties(System.Type)">
+            <summary>Gets reflection information for all declared properties</summary>
+            <param name="type">The type where the properties are declared</param>
+            <returns>A list of <see cref="T:System.Reflection.PropertyInfo"/> declared in the type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredFields(System.Type)">
+            <summary>Gets reflection information for all declared fields</summary>
+            <param name="type">The type where the fields are declared</param>
+            <returns>A list of <see cref="T:System.Reflection.FieldInfo"/> declared in the type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetReturnedType(System.Reflection.MethodBase)">
+            <summary>Gets the return type of a method or constructor</summary>
+            <param name="methodOrConstructor">The method or constructor</param>
+            <returns>The return type of the method</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.Inner(System.Type,System.String)">
+            <summary>Given a type, returns the first inner type matching a recursive search by name</summary>
+            <param name="type">The type to start searching at</param>
+            <param name="name">The name of the inner type (case sensitive)</param>
+            <returns>The inner type if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FirstInner(System.Type,System.Func{System.Type,System.Boolean})">
+            <summary>Given a type, returns the first inner type matching a recursive search with a predicate</summary>
+            <param name="type">The type to start searching at</param>
+            <param name="predicate">The predicate to search with</param>
+            <returns>The inner type if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FirstMethod(System.Type,System.Func{System.Reflection.MethodInfo,System.Boolean})">
+            <summary>Given a type, returns the first method matching a predicate</summary>
+            <param name="type">The type to start searching at</param>
+            <param name="predicate">The predicate to search with</param>
+            <returns>The <see cref="T:System.Reflection.MethodInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FirstConstructor(System.Type,System.Func{System.Reflection.ConstructorInfo,System.Boolean})">
+            <summary>Given a type, returns the first constructor matching a predicate</summary>
+            <param name="type">The type to start searching at</param>
+            <param name="predicate">The predicate to search with</param>
+            <returns>The <see cref="T:System.Reflection.ConstructorInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FirstProperty(System.Type,System.Func{System.Reflection.PropertyInfo,System.Boolean})">
+            <summary>Given a type, returns the first property matching a predicate</summary>
+            <param name="type">The type to start searching at</param>
+            <param name="predicate">The predicate to search with</param>
+            <returns>The <see cref="T:System.Reflection.PropertyInfo"/> if found, otherwise null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetTypes(System.Object[])">
+            <summary>Returns an array containing the type of each object in the given array</summary>
+            <param name="parameters">An array of objects</param>
+            <returns>An array of types or an empty array if parameters is null</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.ActualParameters(System.Reflection.MethodBase,System.Object[])">
+            <summary>Creates an array of input parameters for a given method and a given set of potential inputs</summary>
+            <param name="method">The method you are planing to call</param>
+            <param name="inputs"> The possible input parameters in any order</param>
+            <returns>An object array matching the method signature</returns>
+        </member>
+        <member name="T:HarmonyLib.AccessTools.FieldRef`2">
+            <summary>A read/writable reference to a field</summary>
+            <typeparam name="T">The type the field is defined in</typeparam>
+            <typeparam name="U">The type of the field</typeparam>
+            <param name="obj">The runtime instance to access the field (leave empty for static fields)</param>
+            <returns>The value of the field (or an assignable object)</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(System.String)">
+            <summary>Creates a field reference</summary>
+            <typeparam name="T">The type the field is defined in</typeparam>
+            <typeparam name="U">The type of the field</typeparam>
+            <param name="fieldName">The name of the field</param>
+            <returns>A read and writable field reference</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(System.Reflection.FieldInfo)">
+            <summary>Creates a field reference</summary>
+            <typeparam name="T">The type the field is defined in or "object" if type cannot be accessed at compile time</typeparam>
+            <typeparam name="U">The type of the field</typeparam>
+            <param name="fieldInfo">FieldInfo for the field</param>
+            <returns>A readable and writable field reference</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``2(``0,System.String)">
+            <summary>Creates a field reference for a specific instance</summary>
+            <typeparam name="T">The type the field is defined in</typeparam>
+            <typeparam name="U">The type of the field</typeparam>
+            <param name="instance">The instance</param>
+            <param name="fieldName">The name of the field</param>
+            <returns>A readable and writable field reference</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.FieldRefAccess``1(System.Type,System.String)">
+            <summary>Creates an instance field reference delegate for a private type</summary>
+            <typeparam name="F">The type of the field</typeparam>
+            <param name="type">The class/type</param>
+            <param name="fieldName">The name of the field</param>
+            <returns>A read and writable <see cref="T:HarmonyLib.AccessTools.FieldRef`2"/> delegate</returns>
+        </member>
+        <member name="T:HarmonyLib.AccessTools.FieldRef`1">
+            <summary>A readable/writable reference delegate to a static field</summary>
+            <typeparam name="F">The type of the field</typeparam>
+            <returns>An readable/assignable object representing the static field</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.StaticFieldRefAccess``2(System.String)">
+            <summary>Creates a static field reference</summary>
+            <typeparam name="T">The type the field is defined in or "object" if type cannot be accessed at compile time</typeparam>
+            <typeparam name="F">The type of the field</typeparam>
+            <param name="fieldName">The name of the field</param>
+            <returns>An readable/assignable object representing the static field</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.StaticFieldRefAccess``2(System.Reflection.FieldInfo)">
+             <summary>Creates a static field reference</summary>
+             <typeparam name="T">The class the field is defined in or "object" if type cannot be accessed at compile time</typeparam>
+             <typeparam name="F">The type of the field</typeparam>
+             <param name="fieldInfo">The field</param>
+             <returns>An readable/assignable object representing the static field</returns>
             
         </member>
-        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo``1(System.Linq.Expressions.Expression{System.Action{``0}})">
-             <summary>Given a lambda expression that calls a method, returns the method info</summary>
-             <typeparam name="T"></typeparam>
-             <param name="expression">The lambda expression using the method</param>
-             <returns>The MethodInfo for the method in the lambda expression</returns>
+        <member name="M:HarmonyLib.AccessTools.StaticFieldRefAccess``1(System.Reflection.FieldInfo)">
+            <summary>Creates a static field reference delegate</summary>
+            <typeparam name="F">The type of the field</typeparam>
+            <param name="fieldInfo">FieldInfo for the field</param>
+            <returns>A readable and writable field reference delegate</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.StaticFieldRefAccess``1(System.Type,System.String)">
+            <summary>Creates a static field reference</summary>
+            <typeparam name="F">The type of the field</typeparam>
+            <param name="type">The class/type</param>
+            <param name="fieldName">The name of the field</param>
+            <returns>An readable/assignable object representing the static field</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetOutsideCaller">
+            <summary>Returns who called the current method</summary>
+            <returns>The calling method (excluding the current method)</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.RethrowException(System.Exception)">
+            <summary>Rethrows an exception while preserving its stack trace (throw statement typically clobbers existing stack traces)</summary>
+            <param name="exception">The exception to rethrow</param>
+        </member>
+        <member name="P:HarmonyLib.AccessTools.IsMonoRuntime">
+            <summary>Checks if the current code is running on Mono runtime</summary>
+            <returns>True if we are running under Mono, false otherwise (.NET)</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.ThrowMissingMemberException(System.Type,System.String[])">
+            <summary>Throws a missing member runtime exception</summary>
+            <param name="type">The type that is involved</param>
+            <param name="names">A list of names</param>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDefaultValue(System.Type)">
+            <summary>Gets default value for a specific type</summary>
+            <param name="type">The type</param>
+            <returns>The default value</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.CreateInstance(System.Type)">
+            <summary>Creates an (possibly uninitialized) instance of a given type</summary>
+            <param name="type">The type</param>
+            <returns>The new instance</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy``1(System.Object)">
+            <summary>Makes a deep copy of any object</summary>
+            <typeparam name="T">The type of the instance that should be created</typeparam>
+            <param name="source">The original object</param>
+            <returns>A copy of the original object but of type T</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy``1(System.Object,``0@,System.Func{System.String,HarmonyLib.Traverse,HarmonyLib.Traverse,System.Object},System.String)">
+            <summary>Makes a deep copy of any object</summary>
+            <typeparam name="T">The type of the instance that should be created</typeparam>
+            <param name="source">The original object</param>
+            <param name="result">[out] The copy of the original object</param>
+            <param name="processor">Optional value transformation function (taking a field name and src/dst <see cref="T:HarmonyLib.Traverse"/> instances)</param>
+            <param name="pathRoot">The optional path root to start with</param>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.MakeDeepCopy(System.Object,System.Type,System.Func{System.String,HarmonyLib.Traverse,HarmonyLib.Traverse,System.Object},System.String)">
+            <summary>Makes a deep copy of any object</summary>
+            <param name="source">The original object</param>
+            <param name="resultType">The type of the instance that should be created</param>
+            <param name="processor">Optional value transformation function (taking a field name and src/dst <see cref="T:HarmonyLib.Traverse"/> instances)</param>
+            <param name="pathRoot">The optional path root to start with</param>
+            <returns>The copy of the original object</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsStruct(System.Type)">
+            <summary>Tests if a type is a struct</summary>
+            <param name="type">The type</param>
+            <returns>True if the type is a struct</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsClass(System.Type)">
+            <summary>Tests if a type is a class</summary>
+            <param name="type">The type</param>
+            <returns>True if the type is a class</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsValue(System.Type)">
+            <summary>Tests if a type is a value type</summary>
+            <param name="type">The type</param>
+            <returns>True if the type is a value type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsVoid(System.Type)">
+            <summary>Tests if a type is void</summary>
+            <param name="type">The type</param>
+            <returns>True if the type is void</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsOfNullableType``1(``0)">
+            <summary>Test whether an instance is of a nullable type</summary>
+            <typeparam name="T">Type of instance</typeparam>
+            <param name="instance">An instance to test</param>
+            <returns>True if instance is of nullable type, false if not</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsDeclaredMember``1(``0)">
+            <summary>Test if a class member is declared directly in the type and not in a base type</summary>
+            <param name="member">A member</param>
+            <returns>True if the member is a declared</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.GetDeclaredMember``1(``0)">
+            <summary>Gets the real implementation of a class member</summary>
+            <param name="member">A member</param>
+            <returns>The member itself if its declared. Otherwise the member that is actually implemented in a base type</returns>
+        </member>
+        <member name="M:HarmonyLib.AccessTools.IsInteger(System.Type)">
+             <summary>Tests if a type is an integer type</summary>
+             <param name="type">The type</param>
+             <returns>True if the type represents some integer</returns>
             
         </member>
-        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
-             <summary>Given a lambda expression that calls a method, returns the method info</summary>
-             <typeparam name="T"></typeparam>
-             <typeparam name="TResult"></typeparam>
-             <param name="expression">The lambda expression using the method</param>
-             <returns>The MethodInfo for the method in the lambda expression</returns>
+        <member name="M:HarmonyLib.AccessTools.IsFloatingPoint(System.Type)">
+             <summary>Tests if a type is a floating point type</summary>
+             <param name="type">The type</param>
+             <returns>True if the type represents some floating point</returns>
             
         </member>
-        <member name="M:HarmonyLib.SymbolExtensions.GetMethodInfo(System.Linq.Expressions.LambdaExpression)">
-             <summary>Given a lambda expression that calls a method, returns the method info</summary>
-             <param name="expression">The lambda expression using the method</param>
-             <returns>The MethodInfo for the method in the lambda expression</returns>
+        <member name="M:HarmonyLib.AccessTools.IsNumber(System.Type)">
+             <summary>Tests if a type is a numerical type</summary>
+             <param name="type">The type</param>
+             <returns>True if the type represents some number</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.AccessTools.CombinedHashCode(System.Collections.Generic.IEnumerable{System.Object})">
+             <summary>Calculates a combined hash code for an enumeration of objects</summary>
+             <param name="objects">The objects</param>
+             <returns>The hash code</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.DelegateTypeFactory">
+            <summary>A factory to create delegate types</summary>
+        </member>
+        <member name="F:HarmonyLib.DelegateTypeFactory.instance">
+            <summary>
+            Instance for the delegate type factory
+            </summary>
+            <remarks>
+            Exists for API compatibility with Harmony
+            </remarks>
+        </member>
+        <member name="M:HarmonyLib.DelegateTypeFactory.CreateDelegateType(System.Type,System.Type[])">
+            <summary>
+            Creates a delegate type for a method
+            </summary>
+            <param name="returnType">Type of the return value</param>
+            <param name="argTypes">Types of the arguments</param>
+            <returns>The new delegate type for the given type info</returns>
+        </member>
+        <member name="M:HarmonyLib.DelegateTypeFactory.CreateDelegateType(System.Reflection.MethodInfo)">
+            <summary>Creates a delegate type for a method</summary>
+            <param name="method">The method</param>
+            <returns>The new delegate type</returns>
+        </member>
+        <member name="T:HarmonyLib.GetterHandler`2">
+             <summary>A getter delegate type</summary>
+             <typeparam name="T">Type that getter gets field/property value from</typeparam>
+             <typeparam name="S">Type of the value that getter gets</typeparam>
+             <param name="source">The instance get getter uses</param>
+             <returns>An delegate</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.SetterHandler`2">
+             <summary>A setter delegate type</summary>
+             <typeparam name="T">Type that setter sets field/property value for</typeparam>
+             <typeparam name="S">Type of the value that setter sets</typeparam>
+             <param name="source">The instance the setter uses</param>
+             <param name="value">The value the setter uses</param>
+             <returns>An delegate</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.InstantiationHandler`1">
+             <summary>A constructor delegate type</summary>
+             <typeparam name="T">Type that constructor creates</typeparam>
+             <returns>An delegate</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.FastAccess">
+            <summary>A helper class for fast access to getters and setters</summary>
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateInstantiationHandler``1">
+             <summary>Creates an instantiation delegate</summary>
+             <typeparam name="T">Type that constructor creates</typeparam>
+             <returns>The new instantiation delegate</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateGetterHandler``2(System.Reflection.PropertyInfo)">
+             <summary>Creates an getter delegate for a property</summary>
+             <typeparam name="T">Type that getter reads property from</typeparam>
+             <typeparam name="S">Type of the property that gets accessed</typeparam>
+             <param name="propertyInfo">The property</param>
+             <returns>The new getter delegate</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateGetterHandler``2(System.Reflection.FieldInfo)">
+             <summary>Creates an getter delegate for a field</summary>
+             <typeparam name="T">Type that getter reads field from</typeparam>
+             <typeparam name="S">Type of the field that gets accessed</typeparam>
+             <param name="fieldInfo">The field</param>
+             <returns>The new getter delegate</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateFieldGetter``2(System.String[])">
+             <summary>Creates an getter delegate for a field (with a list of possible field names)</summary>
+             <typeparam name="T">Type that getter reads field/property from</typeparam>
+             <typeparam name="S">Type of the field/property that gets accessed</typeparam>
+             <param name="names">A list of possible field names</param>
+             <returns>The new getter delegate</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateSetterHandler``2(System.Reflection.PropertyInfo)">
+             <summary>Creates an setter delegate</summary>
+             <typeparam name="T">Type that setter assigns property value to</typeparam>
+             <typeparam name="S">Type of the property that gets assigned</typeparam>
+             <param name="propertyInfo">The property</param>
+             <returns>The new setter delegate</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.FastAccess.CreateSetterHandler``2(System.Reflection.FieldInfo)">
+             <summary>Creates an setter delegate for a field</summary>
+             <typeparam name="T">Type that setter assigns field value to</typeparam>
+             <typeparam name="S">Type of the field that gets assigned</typeparam>
+             <param name="fieldInfo">The field</param>
+             <returns>The new getter delegate</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.FastInvokeHandler">
+             <summary>A delegate to invoke a method</summary>
+             <param name="target">The instance</param>
+             <param name="parameters">The method parameters</param>
+             <returns>The method result</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.MethodInvoker">
+            <summary>A helper class to invoke method with delegates</summary>
+        </member>
+        <member name="M:HarmonyLib.MethodInvoker.#ctor(System.Boolean)">
+            <summary>Creates a MethodInvoker that can create a fast invocation handler</summary>
+            <param name="directBoxValueAccess">
+            <para>
+            This option controls how value types passed by reference (e.g. ref int, out my_struct) are handled in the arguments array
+            passed to the fast invocation handler.
+            Since the arguments array is an object array, any value types contained within it are actually references to a boxed value object.
+            Like any other object, there can be other references to such boxed value objects, other than the reference within the arguments array.
+            <example>For example,
+            <code>
+            var val = 5;
+            var box = (object)val;
+            var arr = new object[] { box };
+            handler(arr); // for a method with parameter signature: ref/out/in int
+            </code>
+            </example>
+            </para>
+            <para>
+            If <c>directBoxValueAccess</c> is <c>true</c>, the boxed value object is accessed (and potentially updated) directly when the handler is called,
+            such that all references to the boxed object reflect the potentially updated value.
+            In the above example, if the method associated with the handler updates the passed (boxed) value to 10, both <c>box</c> and <c>arr[0]</c>
+            now reflect the value 10. Note that the original <c>val</c> is not updated, since boxing always copies the value into the new boxed value object.
+            </para>
+            <para>
+            If <c>directBoxValueAccess</c> is <c>false</c> (default), the boxed value object in the arguments array is replaced with a "reboxed" value object,
+            such that potential updates to the value are reflected only in the arguments array.
+            In the above example, if the method associated with the handler updates the passed (boxed) value to 10, only <c>arr[0]</c> now reflects the value 10.
+            </para>
+            </param>
+        </member>
+        <member name="M:HarmonyLib.MethodInvoker.Handler(System.Reflection.MethodInfo,System.Reflection.Module)">
+            <summary>Creates a fast invocation handler from a method and a module</summary>
+            <param name="methodInfo">The method to invoke</param>
+            <param name="module">The module context</param>
+            <returns>The fast invocation handler</returns>
+        </member>
+        <member name="M:HarmonyLib.MethodInvoker.GetHandler(System.Reflection.Emit.DynamicMethod,System.Reflection.Module)">
+             <summary>Creates a fast invocation handler from a method and a module</summary>
+             <param name="methodInfo">The method to invoke</param>
+             <param name="module">The module context</param>
+             <returns>The fast invocation handler</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.MethodInvoker.GetHandler(System.Reflection.MethodInfo)">
+             <summary>Creates a fast invocation handler from a method and a module</summary>
+             <param name="methodInfo">The method to invoke</param>
+             <returns>The fast invocation handler</returns>
             
         </member>
         <member name="T:HarmonyLib.Traverse`1">
@@ -2278,7 +2603,7 @@
             
         </member>
         <member name="M:HarmonyLib.Traverse.FieldExists">
-             <summary>Checks if the current traverse instance is for a field</summary>
+             <summary>Checks if the current traverse instance is for a field or a property</summary>
              <returns>True if its a field</returns>
             
         </member>
@@ -2290,6 +2615,11 @@
         <member name="M:HarmonyLib.Traverse.TypeExists">
              <summary>Checks if the current traverse instance is for a type</summary>
              <returns>True if its a type</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.Traverse.IsEmpty">
+            <summary>Checks if the current traverse instance contains any information</summary>
+            <returns>True if the traverse contains any information</returns>
             
         </member>
         <member name="M:HarmonyLib.Traverse.IterateFields(System.Object,System.Action{HarmonyLib.Traverse})">
@@ -2338,6 +2668,124 @@
         <member name="M:HarmonyLib.Traverse.ToString">
              <summary>Returns a string that represents the current traverse</summary>
              <returns>A string representation</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.CodeInstruction">
+            <summary>An abstract wrapper around OpCode and their operands. Used by transpilers</summary>
+        </member>
+        <member name="F:HarmonyLib.CodeInstruction.opcode">
+            <summary>The opcode</summary>
+        </member>
+        <member name="F:HarmonyLib.CodeInstruction.operand">
+            <summary>The operand</summary>
+        </member>
+        <member name="F:HarmonyLib.CodeInstruction.labels">
+            <summary>All labels defined on this instruction</summary>
+        </member>
+        <member name="F:HarmonyLib.CodeInstruction.blocks">
+            <summary>All exception block boundaries defined on this instruction</summary>
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.#ctor(System.Reflection.Emit.OpCode,System.Object)">
+             <summary>Creates a new CodeInstruction with a given opcode and optional operand</summary>
+             <param name="opcode">The code</param>
+             <param name="operand">The operand</param>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.#ctor(HarmonyLib.CodeInstruction)">
+             <summary>Create a full copy (including labels and exception blocks) of a CodeInstruction</summary>
+             <param name="instruction">The instruction to copy</param>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.Clone">
+             <summary>Clones a CodeInstruction and resets its labels and exception blocks</summary>
+             <returns>A lightweight copy of this code instruction</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.Clone(System.Reflection.Emit.OpCode)">
+             <summary>Clones a CodeInstruction, resets labels and exception blocks and sets its opcode</summary>
+             <param name="opcode">The opcode</param>
+             <returns>A copy of this CodeInstruction with a new opcode</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.Clone(System.Object)">
+             <summary>Clones a CodeInstruction, resets labels and exception blocks and sets its operand</summary>
+             <param name="operand">The opcode</param>
+             <returns>A copy of this CodeInstruction with a new operand</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.CodeInstruction.ToString">
+             <summary>Returns a string representation of the code instruction</summary>
+             <returns>A string representation of the code instruction</returns>
+            
+        </member>
+        <member name="T:HarmonyLib.ExceptionBlockType">
+            <summary>Exception block types</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.BeginExceptionBlock">
+            <summary>The beginning of an exception block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.BeginCatchBlock">
+            <summary>The beginning of a catch block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.BeginExceptFilterBlock">
+            <summary>The beginning of an except filter block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.BeginFaultBlock">
+            <summary>The beginning of a fault block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.BeginFinallyBlock">
+            <summary>The beginning of a finally block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlockType.EndExceptionBlock">
+            <summary>The end of an exception block</summary>
+        </member>
+        <member name="T:HarmonyLib.ExceptionBlock">
+            <summary>An exception block</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlock.blockType">
+            <summary>Block type</summary>
+        </member>
+        <member name="F:HarmonyLib.ExceptionBlock.catchType">
+            <summary>Catch type</summary>
+        </member>
+        <member name="M:HarmonyLib.ExceptionBlock.#ctor(HarmonyLib.ExceptionBlockType,System.Type)">
+             <summary>Creates an exception block</summary>
+             <param name="blockType">Block type</param>
+             <param name="catchType">Catch type</param>
+            
+        </member>
+        <member name="T:HarmonyLib.Transpilers">
+            <summary>A collection of commonly used transpilers</summary>
+        </member>
+        <member name="M:HarmonyLib.Transpilers.EmitDelegate``1(``0)">
+            <summary>
+            Returns an instruction to call the specified delegate.
+            </summary>
+            <typeparam name="T">The delegate type to emit.</typeparam>
+            <param name="action">The delegate to emit.</param>
+            <returns>The instruction to </returns>
+        </member>
+        <member name="M:HarmonyLib.Transpilers.MethodReplacer(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.MethodBase,System.Reflection.MethodBase)">
+             <summary>A transpiler that replaces all occurrences of a given method with another one</summary>
+             <param name="instructions">The instructions to act on</param>
+             <param name="from">Method or constructor to search for</param>
+             <param name="to">Method or constructor to replace with</param>
+             <returns>Modified instructions</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.Transpilers.Manipulator(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Func{HarmonyLib.CodeInstruction,System.Boolean},System.Action{HarmonyLib.CodeInstruction})">
+             <summary>A transpiler that alters instructions that match a predicate by calling an action</summary>
+             <param name="instructions">The instructions to act on</param>
+             <param name="predicate">A predicate selecting the instructions to change</param>
+             <param name="action">An action to apply to matching instructions</param>
+             <returns>Modified instructions</returns>
+            
+        </member>
+        <member name="M:HarmonyLib.Transpilers.DebugLogger(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.String)">
+             <summary>A transpiler that logs a text at the beginning of the method</summary>
+             <param name="instructions">The instructions to act on</param>
+             <param name="text">The log text</param>
+             <returns>Modified instructions</returns>
             
         </member>
     </members>
