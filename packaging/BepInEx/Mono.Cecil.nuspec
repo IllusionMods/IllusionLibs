@@ -6,10 +6,9 @@
     <description>Cecil is a library to inspect, modify and create .NET programs and libraries</description>
     <authors>jbevain</authors>
     <projectUrl>https://github.com/jbevain/cecil</projectUrl>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\Mono.Cecil*" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\Mono.Cecil*" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

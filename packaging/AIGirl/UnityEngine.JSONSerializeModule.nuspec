@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Provides the JsonUtility class which lets you serialize Unity Objects to JSON format</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.JSONSerializeModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.JSONSerializeModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

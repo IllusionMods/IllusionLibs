@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Provides helper methods to convert images from and to PNG, JPEG or EXR formats</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.ImageConversionModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.ImageConversionModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

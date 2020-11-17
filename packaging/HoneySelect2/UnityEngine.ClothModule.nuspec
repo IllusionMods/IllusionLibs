@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>The Cloth module implements cloth physics simulation through the Cloth component</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.ClothModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.ClothModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

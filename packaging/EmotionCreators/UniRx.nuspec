@@ -5,10 +5,9 @@
     <version>$gameVersion$</version>
     <description>Reimplementation of the .NET Reactive Extensions for Unity</description>
     <authors>neuecc</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UniRx.dll" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UniRx.dll" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

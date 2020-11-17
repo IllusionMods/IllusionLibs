@@ -6,10 +6,9 @@
     <description>General purpose .NET assembly modding "basework", powered by cecil</description>
     <authors>0x0ade</authors>
     <projectUrl>https://github.com/MonoMod/MonoMod</projectUrl>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\MonoMod*" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\MonoMod*" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

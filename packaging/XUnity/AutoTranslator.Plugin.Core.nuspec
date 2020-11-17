@@ -6,11 +6,10 @@
     <description>Provides on-the-fly translations using various online translators</description>
     <authors>gravydevsupreme</authors>
     <projectUrl>https://github.com/bbepis/XUnity.AutoTranslator</projectUrl>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net35"/>
-    <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net35" />
+    <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

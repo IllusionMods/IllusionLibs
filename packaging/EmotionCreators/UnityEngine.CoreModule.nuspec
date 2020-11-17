@@ -5,11 +5,10 @@
     <version>$unityVersion$</version>
     <description>Unity core libraries</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.dll" target="lib\net46"/>
-    <file src="libraries\UnityEngine.CoreModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.dll" target="lib\net46" />
+    <file src="libraries\UnityEngine.CoreModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

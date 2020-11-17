@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Unity immediate mode GUI library</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.IMGUIModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.IMGUIModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

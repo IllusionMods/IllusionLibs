@@ -6,11 +6,10 @@
     <description>Unity game patcher and plugin framework</description>
     <authors>Bepis, GHorsington</authors>
     <projectUrl>https://github.com/BepInEx/BepInEx</projectUrl>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\BepInEx.dll" target="lib\net35"/>
-    <file src="libraries\BepInEx.xml" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\BepInEx.dll" target="lib\net35" />
+    <file src="libraries\BepInEx.xml" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

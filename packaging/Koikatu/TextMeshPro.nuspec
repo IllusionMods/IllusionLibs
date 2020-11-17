@@ -5,10 +5,9 @@
     <version>$gameVersion$</version>
     <description>Alternate text drawing solution for Unity</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\TextMeshPro*.dll" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\TextMeshPro*.dll" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

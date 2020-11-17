@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Implements the legacy WWW system that lets you communicate with http services</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.UnityWebRequestWWWModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.UnityWebRequestWWWModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

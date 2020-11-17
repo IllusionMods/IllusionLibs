@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Implements the AssetBundle class and related APIs to load data from AssetBundles</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.AssetBundleModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.AssetBundleModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Useful extensions</description>
     <authors>?</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityExtensions.dll" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityExtensions.dll" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

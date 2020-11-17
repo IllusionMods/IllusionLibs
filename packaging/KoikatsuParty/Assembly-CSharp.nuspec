@@ -5,10 +5,9 @@
     <version>$gameVersion$</version>
     <description>Game code (NOTE: Use the Koikatu version instead unless you absolutely need to handle some KKP-specific difference)</description>
     <authors>Illusion</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\Assembly-CSharp.dll" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\Assembly-CSharp.dll" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

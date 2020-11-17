@@ -5,10 +5,9 @@
     <version>$unityVersion$</version>
     <description>Provides functionality to take screen shots using the ScreenCapture class</description>
     <authors>Unity</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\UnityEngine.ScreenCaptureModule.*" target="lib\net46"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\UnityEngine.ScreenCaptureModule.*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

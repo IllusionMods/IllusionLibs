@@ -5,10 +5,9 @@
     <version>$gameVersion$</version>
     <description>Game code</description>
     <authors>Illusion</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\Assembly-CSharp.dll" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\Assembly-CSharp.dll" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>

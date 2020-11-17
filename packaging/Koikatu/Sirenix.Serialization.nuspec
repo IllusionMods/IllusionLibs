@@ -5,10 +5,9 @@
     <version>$gameVersion$</version>
     <description>Sirenix serialization library</description>
     <authors>Sirenix</authors>
-    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="libraries\Sirenix.Serialization.dll" target="lib\net35"/>
-    <file src="..\install.ps1" target="tools"/>
+    <file src="libraries\Sirenix.Serialization.dll" target="lib\net35" />
+    <file src="..\install.ps1" target="tools" />
   </files>
 </package>
