@@ -20,14 +20,14 @@ jobs:
     - name: Nuget pack
       working-directory: .\packaging
       run: |
-        gci -Path AIGirl -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.AIGirl.$($_.BaseName);gameVersion=2020.05.29;unityVersion=2018.2.21.1" }
-        gci -Path AIShoujo -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.AIShoujo.$($_.BaseName);gameVersion=2019.12.20;unityVersion=2018.2.21.1" }
-        gci -Path EmotionCreators -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.EmotionCreators.$($_.BaseName);gameVersion=2019.6.6;unityVersion=2017.4.24.1" }
-        gci -Path Koikatu -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.Koikatu.$($_.BaseName);gameVersion=2019.4.27;unityVersion=5.6.2" }
-        gci -Path KoikatsuParty -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.KoikatsuParty.$($_.BaseName);gameVersion=2019.4.27;unityVersion=5.6.2" }
-        gci -Path PlayHome -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.PlayHome.$($_.BaseName);gameVersion=2018.3.11a;unityVersion=5.5.5a" }
-        gci -Path HoneySelect -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect.$($_.BaseName);gameVersion=2017.6.30;unityVersion=5.3.5" }
-        gci -Path HoneySelect2 -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect2.$($_.BaseName);gameVersion=2020.05.29;unityVersion=2018.4.11" }
+        gci -Path AIGirl -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.AIGirl.$($_.BaseName);gameVersion=2020.05.29.1;unityVersion=2018.2.21.2" }
+        gci -Path AIShoujo -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.AIShoujo.$($_.BaseName);gameVersion=2019.12.20.1;unityVersion=2018.2.21.2" }
+        gci -Path EmotionCreators -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.EmotionCreators.$($_.BaseName);gameVersion=2019.6.6.1;unityVersion=2017.4.24.2" }
+        gci -Path Koikatu -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.Koikatu.$($_.BaseName);gameVersion=2019.4.27.1;unityVersion=5.6.2.1" }
+        gci -Path KoikatsuParty -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.KoikatsuParty.$($_.BaseName);gameVersion=2019.4.27.1;unityVersion=5.6.2.1" }
+        gci -Path PlayHome -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.PlayHome.$($_.BaseName);gameVersion=2018.3.11.1;unityVersion=5.5.5.1" }
+        gci -Path HoneySelect -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect.$($_.BaseName);gameVersion=2017.6.30.1;unityVersion=5.3.5.1" }
+        gci -Path HoneySelect2 -Filter *.nuspec | foreach { nuget pack $_.FullName-properties "id=IllusionLibs.HoneySelect2.$($_.BaseName);gameVersion=2020.05.29.1;unityVersion=2018.4.11.1" }
         gci -Path XUnity -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.XUnity.$($_.BaseName)" }
         gci -Path BepInEx -Filter *.nuspec | foreach { nuget pack $_.FullName -properties "id=IllusionLibs.BepInEx.$($_.BaseName)" }
       
