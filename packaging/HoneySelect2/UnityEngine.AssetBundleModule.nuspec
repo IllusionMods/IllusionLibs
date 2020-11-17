@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Implements the AssetBundle class and related APIs to load data from AssetBundles</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.AssetBundleModule.*" target="lib\net46" />

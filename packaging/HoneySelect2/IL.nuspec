@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Illusion extension methods</description>
     <authors>Illusion</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\IL.dll" target="lib\net46" />

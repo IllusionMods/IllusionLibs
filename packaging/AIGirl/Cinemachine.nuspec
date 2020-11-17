@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>A suite of ‘smart’ procedural camera modules</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Cinemachine.dll" target="lib\net46" />

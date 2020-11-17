@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Efficient binary data serializer and deserializer</description>
     <authors>neuecc, AArnott</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\MessagePack.dll" target="lib\net46" />

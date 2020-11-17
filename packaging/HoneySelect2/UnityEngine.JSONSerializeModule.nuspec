@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Provides the JsonUtility class which lets you serialize Unity Objects to JSON format</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.JSONSerializeModule.*" target="lib\net46" />

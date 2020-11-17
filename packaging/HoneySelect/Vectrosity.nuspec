@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Line-drawing utility for Unity</description>
     <authors>Starscene Software</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Vectrosity.dll" target="lib\net35" />

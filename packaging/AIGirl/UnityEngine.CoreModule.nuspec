@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Unity core libraries</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.dll" target="lib\net46" />

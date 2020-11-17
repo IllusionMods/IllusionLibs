@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>The Animation module implements Unity's animation system</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.AnimationModule.*" target="lib\net46" />

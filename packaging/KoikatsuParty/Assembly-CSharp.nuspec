@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Game code (NOTE: Use the Koikatu version instead unless you absolutely need to handle some KKP-specific difference)</description>
     <authors>Illusion</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Assembly-CSharp.dll" target="lib\net35" />

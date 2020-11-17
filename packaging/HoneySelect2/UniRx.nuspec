@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Reimplementation of the .NET Reactive Extensions for Unity</description>
     <authors>neuecc</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UniRx.dll" target="lib\net46" />

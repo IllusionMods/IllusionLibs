@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Alternate text drawing solution for Unity</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\TextMeshPro*.dll" target="lib\net35" />

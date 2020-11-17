@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Unity UI library</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.UI.dll" target="lib\net35" />

@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Implements Unity's audio system</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.AudioModule.*" target="lib\net46" />

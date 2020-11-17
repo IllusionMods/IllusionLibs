@@ -5,6 +5,9 @@
     <version>1.0.7</version>
     <description>Removes the hard cap of 20 accessories on characters</description>
     <authors>Joan6694</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\MoreAccessories.dll" target="lib\net35" />

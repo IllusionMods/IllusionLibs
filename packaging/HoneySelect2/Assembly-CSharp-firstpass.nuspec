@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Unity asset code</description>
     <authors>Illusion</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Assembly-CSharp-firstpass.dll" target="lib\net35" />

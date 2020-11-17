@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Provides functionality to take screen shots using the ScreenCapture class</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.ScreenCaptureModule.*" target="lib\net46" />

@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Useful extensions</description>
     <authors>?</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityExtensions.dll" target="lib\net46" />

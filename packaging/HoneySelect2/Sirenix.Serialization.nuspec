@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Sirenix serialization library</description>
     <authors>Sirenix</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Sirenix.Serialization.dll" target="lib\net46" />

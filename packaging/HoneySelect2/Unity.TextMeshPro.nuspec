@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>Unity TextMeshPro library</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Unity.TextMeshPro.*" target="lib\net46" />

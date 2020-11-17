@@ -5,6 +5,9 @@
     <version>$gameVersion$</version>
     <description>Game code</description>
     <authors>Illusion</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Assembly-CSharp.dll" target="lib\net46" />

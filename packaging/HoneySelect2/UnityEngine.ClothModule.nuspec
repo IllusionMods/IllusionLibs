@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>The Cloth module implements cloth physics simulation through the Cloth component</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.ClothModule.*" target="lib\net46" />

@@ -5,6 +5,9 @@
     <version>$unityVersion$</version>
     <description>AI control logic</description>
     <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.AIModule.dll" target="lib\net46" />
