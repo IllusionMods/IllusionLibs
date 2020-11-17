@@ -12,5 +12,6 @@
   <files>
     <file src="libraries\UnityEngine.UIModule*" target="lib\net46" />
     <file src="..\install.ps1" target="tools" />
+    <file src="$id$.targets" target="build" />
   </files>
 </package>

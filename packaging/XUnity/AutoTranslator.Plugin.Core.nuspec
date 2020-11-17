@@ -11,5 +11,6 @@
     <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net35" />
     <file src="libraries\XUnity.AutoTranslator.Plugin.Core.dll" target="lib\net46" />
     <file src="..\install.ps1" target="tools" />
+    <file src="$id$.targets" target="build" />
   </files>
 </package>
