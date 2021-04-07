@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>20.11.5.1</version>
+    <version>21.1.11.1</version>
     <description>General purpose .NET assembly modding "basework", powered by cecil</description>
     <authors>0x0ade</authors>
     <projectUrl>https://github.com/MonoMod/MonoMod</projectUrl>
