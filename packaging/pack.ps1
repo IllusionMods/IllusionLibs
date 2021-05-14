@@ -18,14 +18,14 @@ function Pack {
     }
 }
 
-Pack "AIGirl" "2020.05.29.2" "2018.2.21.4"
-Pack "AIShoujo" "2019.12.20.2" "2018.2.21.4"
-Pack "EmotionCreators" "2019.6.6.2" "2017.4.24.4"
-Pack "Koikatu" "2019.4.27.2" "5.6.2.4"
-Pack "KoikatsuParty" "2019.4.27.2" "5.6.2.4"
-Pack "PlayHome" "2018.3.11.2" "5.5.5.4"
-Pack "VRKanojo" "2021.1.13.0" "5.4.5.4"
+Pack "AIGirl" "2020.05.29.4" "2018.2.21.4"
+Pack "AIShoujo" "2019.12.20.4" "2018.2.21.4"
+Pack "EmotionCreators" "2019.6.6.4" "2017.4.24.4"
+Pack "Koikatu" "2019.4.27.4" "5.6.2.4"
+Pack "KoikatsuParty" "2019.4.27.4" "5.6.2.4"
+Pack "PlayHome" "2018.3.11.4" "5.5.5.4"
+Pack "VRKanojo" "2021.1.13.4" "5.4.5.4"
 Pack "HoneySelect" "2017.6.30.2" "5.3.5.2"
-Pack "HoneySelect2" "2020.05.29.2" "2018.4.11.4"
+Pack "HoneySelect2" "2020.05.29.4" "2018.4.11.4"
 Pack "XUnity" "" ""
 Pack "BepInEx" "" ""
