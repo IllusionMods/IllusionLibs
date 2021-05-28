@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$unityVersion$</version>
+    <description>Unity UI library</description>
+    <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\UnityEngine.UIModule*" target="lib\net46" />
+    <file src="..\install.ps1" target="tools" />
+    <file src="$id$.targets" target="build" />
+  </files>
+</package>
