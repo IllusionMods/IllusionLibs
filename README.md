@@ -18,11 +18,12 @@ Every library ever needed for Illusion game modding, almost.
 ```
 3. Close and reopen your solution if you had it open in VS.
 4. Right click on your project and "Manage NuGet packages..."
-5. Change "Package source" on right to "IllusionMods" and turn on "Include prerelease" toggle. You should now see all of the packages from this repository (and more).
+5. Change "Package source" on right to "IllusionMods". You should now see all of the packages from this repository (and more).
 
-## How to update nuget packages
+## How to update nuget packages in this repository
+This is necessary only if you want to update or add new dlls to this repository. To do that you will have to prepare the dlls and update nuspec files.
 1. Clone the repo
-2. Use the included mono-cil-strip.exe to strip the new assemblies of their code
+2. Use the included mono-cil-strip.exe to strip the new assemblies of their code and publicize them (make all members public for easier access, your project has to be set to unsafe for it to work, the packages all contain a script that sets this flag automatically when installed)
    - `strip-folder.bat` is used by dragging a folder on it
    - `strip-dlls-folder.sh` (Linux) is used by running it to strip contents of the dlls folder
    - `mono-cil-strip.exe` is used by dragging a file on it
