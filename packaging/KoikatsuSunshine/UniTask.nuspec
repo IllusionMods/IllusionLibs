@@ -10,7 +10,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="libraries\UniRx.*" target="lib\net46" />
+    <file src="libraries\UniTask.*" target="lib\net46" />
     <file src="..\install.ps1" target="tools" />
     <file src="$id$.targets" target="build" />
   </files>
