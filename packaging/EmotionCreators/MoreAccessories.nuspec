@@ -6,11 +6,11 @@
     <description>Removes the hard cap of 20 accessories on characters</description>
     <authors>Joan6694, Jalil29</authors>
     <dependencies>
-      <group targetFramework=".NETFramework3.5" />
+      <group targetFramework=".NETFramework4.6" />
     </dependencies>
   </metadata>
   <files>
-    <file src="libraries\MoreAccessories.dll" target="lib\net35" />
+    <file src="libraries\MoreAccessories.dll" target="lib\net46" />
     <file src="..\install.ps1" target="tools" />
     <file src="$id$.targets" target="build" />
   </files>
