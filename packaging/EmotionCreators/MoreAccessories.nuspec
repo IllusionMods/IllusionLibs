@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>2.0.10</version>
+    <version>2.0.20</version>
     <description>Removes the hard cap of 20 accessories on characters</description>
     <authors>Joan6694, Jalil29</authors>
     <dependencies>
