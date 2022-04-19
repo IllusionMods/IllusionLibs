@@ -2,13 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>IllusionLibs.BepInEx</id>
-    <version>5.4.15</version>
-    <description>Unity game patcher and plugin framework</description>
+    <version>5.4.19</version>
+    <description>Unity game patcher and plugin framework. This version comes with MonoMod 22.1.29.1 and Cecil 0.10.4.1.</description>
     <authors>Bepis, GHorsington</authors>
     <projectUrl>https://github.com/BepInEx/BepInEx</projectUrl>
     <dependencies>
       <!-- Remember to change the harmony version to the exact version that ships with that bepin version -->
-      <dependency id="IllusionLibs.BepInEx.Harmony" version="[2.5.4]" />
+      <dependency id="IllusionLibs.BepInEx.Harmony" version="[2.9]" />
+      <!-- <dependency id="IllusionLibs.BepInEx.MonoMod" version="[22.1.29.1]" /> -->
+      <!-- <dependency id="IllusionLibs.BepInEx.Mono.Cecil" version="[0.10.4.1]" /> -->
     </dependencies>
   </metadata>
   <files>
