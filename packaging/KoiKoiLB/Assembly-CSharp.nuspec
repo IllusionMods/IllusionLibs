@@ -6,11 +6,12 @@
     <description>Game code</description>
     <authors>ULTRANOVA Entertainment</authors>
     <dependencies>
-      <group targetFramework=".NETFramework3.5" />
+      <group targetFramework=".NETFramework4.5" />
     </dependencies>
   </metadata>
   <files>
-    <file src="libraries\Assembly-CSharp.dll" target="lib\net35" />
+    <file src="libraries\Assembly-CSharp.dll" target="lib\net45" />
+    <file src="libraries\netstandard.dll" target="lib\net45" />
     <file src="..\install.ps1" target="tools" />
     <file src="$id$.targets" target="build" />
   </files>
