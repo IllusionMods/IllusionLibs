@@ -19,7 +19,7 @@ function Pack {
 }
 
 Pack "AIGirl" "2020.05.29.4" "2018.2.21.4"
-Pack "AIShoujo" "2019.12.20.4" "2018.2.21.4"
+Pack "AIShoujo" "2022.06.20.1" "2018.2.21.4"
 Pack "EmotionCreators" "2019.6.6.4" "2017.4.24.4"
 Pack "Koikatu" "2019.4.27.4" "5.6.2.4"
 Pack "KoikatsuParty" "2021.03.25.0" "5.6.2.4"
