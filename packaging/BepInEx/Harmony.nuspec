@@ -4,7 +4,7 @@
     <id>$id$</id>
     <version>2.9</version>
     <description>HarmonyX - A library for patching, replacing and decorating .NET and Mono methods during runtime</description>
-    <authors>pardeike, Horse, Marco and others</authors>
+    <authors>pardeike, GHorsington, ManlyMarco and others</authors>
     <projectUrl>https://github.com/BepInEx/HarmonyX</projectUrl>
   </metadata>
   <files>
