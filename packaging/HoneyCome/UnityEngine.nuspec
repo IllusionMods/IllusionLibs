@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$unityVersion$</version>
+    <description>Unity core libraries</description>
+    <authors>Unity</authors>
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\UnityEngine.dll" target="lib\net472" />
+    <file src="libraries\UnityEngine.CoreModule.*" target="lib\net472" />
+    <file src="libraries\UnityEngine.IMGUIModule.dll" target="lib\net472" />
+    <file src="libraries\UnityEngine.InputLegacyModule.dll" target="lib\net472" />
+    <file src="libraries\UnityEngine.InputModule.dll" target="lib\net472" />
+    <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->
+    <file src="$id$.targets" target="build" />
+  </files>
+</package>
