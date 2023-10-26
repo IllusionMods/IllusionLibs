@@ -6,17 +6,17 @@
     <description>Game code and critical dependencies</description>
     <authors>Illgames</authors>
     <dependencies>
-      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework="net6.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="libraries\Assembly-CSharp*" target="lib\net472" />
-    <file src="libraries\IL.dll" target="lib\net472" />
-    <file src="libraries\UniRx.dll" target="lib\net472" />
-    <file src="libraries\UniTask.dll" target="lib\net472" />
-    <file src="libraries\MessagePack*" target="lib\net472" />
-    <file src="libraries\MemoryPack.dll" target="lib\net472" />
+    <file src="libraries\Assembly-CSharp*" target="lib\net60" />
+    <file src="libraries\IL.dll" target="lib\net60" />
+    <file src="libraries\UniRx.dll" target="lib\net60" />
+    <file src="libraries\UniTask.dll" target="lib\net60" />
+    <file src="libraries\MessagePack*" target="lib\net60" />
+    <file src="libraries\MemoryPack.dll" target="lib\net60" />
     <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->
-    <file src="$id$.targets" target="build" />
+    <!--<file src="$id$.targets" target="build" />-->
   </files>
 </package>

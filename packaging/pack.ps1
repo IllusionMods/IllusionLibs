@@ -18,6 +18,7 @@ function Pack {
     }
 }
 
+# Game name, Game assembly version, Unity assembly version
 Pack "AIGirl" "2020.05.29.4" "2018.2.21.4"
 Pack "AIShoujo" "2022.06.20.1" "2018.2.21.4"
 Pack "EmotionCreators" "2019.6.6.4" "2017.4.24.4"
@@ -32,6 +33,6 @@ Pack "KoikatsuSunshine" "2021.09.17.0" "2019.4.9.0"
 Pack "KoikatsuSunshineVR" "2021.09.21.0" "2019.4.9.0"
 Pack "SexyBeachPR" "2015.12.18.0" "4.6.7.0"
 Pack "KoiKoiLB" "2023.05.27.2" "2021.3.18.2"
-Pack "HoneyCome" "2023.09.08.0" "2021.3.14.0"
+Pack "HoneyCome" "2023.09.08.1" "2021.3.14.1"
 Pack "XUnity" "" ""
 Pack "BepInEx" "" ""
