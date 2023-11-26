@@ -11,10 +11,11 @@
   </metadata>
   <files>
     <file src="libraries\UnityEngine.dll" target="lib\net60" />
+    <file src="libraries\UnityEngine.xml" target="lib\net60" />
     <file src="libraries\UnityEngine.CoreModule.*" target="lib\net60" />
-    <file src="libraries\UnityEngine.IMGUIModule.dll" target="lib\net60" />
-    <file src="libraries\UnityEngine.InputLegacyModule.dll" target="lib\net60" />
-    <file src="libraries\UnityEngine.InputModule.dll" target="lib\net60" />
+    <file src="libraries\UnityEngine.IMGUIModule.*" target="lib\net60" />
+    <file src="libraries\UnityEngine.InputLegacyModule.*" target="lib\net60" />
+    <file src="libraries\UnityEngine.InputModule.*" target="lib\net60" />
     <file src="libraries\UniRx.dll" target="lib\net60" />
     <file src="libraries\UniTask.dll" target="lib\net60" />
     <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->

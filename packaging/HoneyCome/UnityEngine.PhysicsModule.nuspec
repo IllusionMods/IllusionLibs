@@ -3,16 +3,14 @@
   <metadata>
     <id>$id$</id>
     <version>$unityVersion$</version>
-    <description>Unity core libraries</description>
+    <description>The Physics module implements 3D physics in Unity</description>
     <authors>Unity</authors>
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="libraries\Unity.TextMeshPro.dll" target="lib\net60" />
-    <file src="libraries\UnityEngine.UI*" target="lib\net60" />
-    <file src="libraries\UnityEngine.TextRenderingModule.*" target="lib\net60" />
+    <file src="libraries\UnityEngine.PhysicsModule.*" target="lib\net60" />
     <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->
     <!--<file src="$id$.targets" target="build" />-->
   </files>
