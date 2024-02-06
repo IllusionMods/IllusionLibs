@@ -4,3 +4,4 @@
 
 .vs
 *.mdb
+*.Caches
