@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>A metapackage which references all packages applicable to this game</description>
+    <authors>Illusion</authors>
+    <dependencies>
+      <group targetFramework="net6.0" >
+        <dependency id="BepInEx.Analyzers" version="[1.0.8)" />
+        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.682)" />
+        <dependency id="IllusionLibs.RoomGirl.Assembly-CSharp" version="[$gameVersion$]" />
+        <dependency id="IllusionLibs.RoomGirl.Il2Cppmscorlib" version="[$gameVersion$]" />
+        <dependency id="IllusionLibs.RoomGirl.Unity" version="[$unityVersion$]" />
+        <dependency id="IllusionLibs.RoomGirl.UnityEngine" version="[$unityVersion$]" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
