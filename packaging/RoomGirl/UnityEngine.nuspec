@@ -6,12 +6,10 @@
     <description>Unity core libraries</description>
     <authors>Unity</authors>
     <dependencies>
-      <group targetFramework="net6.0" >
+      <group targetFramework="net6.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="libraries\UnityEngine.*" target="lib\net60" />
-    <file src="..\install.ps1" target="tools" />
-    <file src="$id$.targets" target="build" />
   </files>
 </package>
