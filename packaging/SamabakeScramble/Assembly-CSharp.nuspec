@@ -7,7 +7,7 @@
     <authors>Illgames</authors>
     <dependencies>
       <group targetFramework="net6.0" >
-        <dependency id="IllusionLibs.SamabakeScramble.UnityEngine" version="2021.3.33" />
+        <dependency id="IllusionLibs.SamabakeScramble.UnityEngine" version="2021.3.33.1" />
         <dependency id="IllusionLibs.SamabakeScramble.Il2Cppmscorlib" version="$gameVersion$" />
       </group>
     </dependencies>
