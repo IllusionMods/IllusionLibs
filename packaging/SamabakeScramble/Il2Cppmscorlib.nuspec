@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Critical IL2CPP system libraries</description>
+    <authors>Illgames</authors>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\Il2Cppmscorlib.dll" target="lib\net60" />
+    <file src="libraries\Il2CppSystem.Core.dll" target="lib\net60" />
+    <file src="libraries\Il2CppSystem.dll" target="lib\net60" />
+    <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->
+    <!--<file src="$id$.targets" target="build" />-->
+  </files>
+</package>

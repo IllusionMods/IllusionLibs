@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Game code and critical dependencies</description>
+    <authors>Illgames</authors>
+    <dependencies>
+      <group targetFramework="net6.0" >
+        <dependency id="IllusionLibs.HoneyCome.UnityEngine" version="2021.3.14.2" />
+        <dependency id="IllusionLibs.HoneyCome.Il2Cppmscorlib" version="$gameVersion$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\Assembly-CSharp*" target="lib\net60" />
+    <file src="libraries\IL.dll" target="lib\net60" />
+    <file src="libraries\MessagePack*" target="lib\net60" />
+    <file src="libraries\MemoryPack.dll" target="lib\net60" />
+    <!--<file src="..\install.ps1" target="tools" /> not necessary since assemblies are not publicized-->
+    <!--<file src="$id$.targets" target="build" />-->
+  </files>
+</package>
