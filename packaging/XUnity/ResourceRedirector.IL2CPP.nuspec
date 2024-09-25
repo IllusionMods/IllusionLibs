@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>5.4</version>
+    <description>Allows modifying resources loaded through the Resources and AssetBundle API as they are being loaded by the game</description>
+    <authors>gravydevsupreme</authors>
+    <projectUrl>https://github.com/bbepis/XUnity.AutoTranslator</projectUrl>
+  </metadata>
+  <files>
+    <file src="libraries-IL2CPP\XUnity.ResourceRedirector.dll" target="lib\net60" />
+  </files>
+</package>
