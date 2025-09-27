@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Optional libraries for various extra features</description>
+    <authors>Various</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/Aicomi/icon.jpg</iconUrl>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\Coffee.SoftMaskForUGUI.R.dll" target="lib\net60" />
+    <file src="libraries\Coffee.UIParticle.dll" target="lib\net60" />
+    <file src="libraries\Coffee.UIParticle.R.dll" target="lib\net60" />
+    <file src="libraries\Coffee.UnmaskForUGUI.dll" target="lib\net60" />
+    <file src="libraries\com.alelievr.NodeGraphProcessor.Runtime.dll" target="lib\net60" />
+    <file src="libraries\Crest.dll" target="lib\net60" />
+    <file src="libraries\Crest.Examples.dll" target="lib\net60" />
+    <file src="libraries\FinalIK.dll" target="lib\net60" />
+    <file src="libraries\Funly.SkyStudio.Example.dll" target="lib\net60" />
+    <file src="libraries\Funly.SkyStudio.Runtime.dll" target="lib\net60" />
+    <file src="libraries\Funly.SkyStudio.Universal.dll" target="lib\net60" />
+    <file src="libraries\Cinemachine.dll" target="lib\net60" />
+    <file src="libraries\CodeMonkey_CursorSystemPro.dll" target="lib\net60" />
+    <file src="libraries\Coffee.CompositeCanvas.dll" target="lib\net60" />
+    <file src="libraries\Coffee.SoftMaskForUGUI.Demo.dll" target="lib\net60" />
+    <file src="libraries\Coffee.SoftMaskForUGUI.dll" target="lib\net60" />
+    <file src="libraries\LitMotion.Extensions.dll" target="lib\net60" />
+    <file src="libraries\MagicaCloth.dll" target="lib\net60" />
+    <file src="libraries\MirrorsAndReflections.dll" target="lib\net60" />
+    <file src="libraries\Obi.dll" target="lib\net60" />
+    <file src="libraries\ProjectDawn.Impostor.dll" target="lib\net60" />
+    <file src="libraries\ProjectDawn.Impostor.Samples.GameKit.dll" target="lib\net60" />
+    <file src="libraries\R3.dll" target="lib\net60" />
+    <file src="libraries\R3.Unity.dll" target="lib\net60" />
+    <file src="libraries\RaindropFX.URP.dll" target="lib\net60" />
+    <file src="libraries\RAM.dll" target="lib\net60" />
+    <file src="libraries\sc.stylizedgrass.runtime.dll" target="lib\net60" />
+    <file src="libraries\SimpleAnimationComponent.dll" target="lib\net60" />
+    <file src="libraries\SplitScreenPro.dll" target="lib\net60" />
+    <file src="libraries\TriangleDotNet.dll" target="lib\net60" />
+    <file src="libraries\uLipSync.Runtime.dll" target="lib\net60" />
+    <file src="libraries\VContainer.dll" target="lib\net60" />
+    <file src="libraries\XLua.Runtime.dll" target="lib\net60" />
+    <file src="libraries\ZString.dll" target="lib\net60" />
+    <file src="libraries\LitMotion.dll" target="lib\net60" />
+  </files>
+</package>

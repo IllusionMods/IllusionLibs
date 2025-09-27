@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>IL2CPP system libraries (used to interface with the game's runtime)</description>
+    <authors>Illgames</authors>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\Il2Cppmscorlib.dll" target="lib\net60" />
+    <file src="libraries\Il2CppSystem.*" target="lib\net60" />
+  </files>
+</package>
