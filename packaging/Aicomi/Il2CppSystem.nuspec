@@ -5,6 +5,7 @@
     <version>$gameVersion$</version>
     <description>IL2CPP system libraries (used to interface with the game's runtime)</description>
     <authors>Illgames</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/Aicomi/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>

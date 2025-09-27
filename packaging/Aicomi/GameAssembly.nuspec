@@ -8,10 +8,10 @@
     <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/Aicomi/icon.jpg</iconUrl>
   </metadata>
   <files>
-    <file src="libraries\Assembly-CSharp*" target="lib\net60" />
-    <file src="libraries\ILGLib.dll" target="lib\net60" />
-    <file src="libraries\MessagePack*" target="lib\net60" />
-    <file src="libraries\MemoryPack.dll" target="lib\net60" />
-    <file src="libraries\Cinemachine.dll" target="lib\net60" />
+    <file src="libraries\Assembly-CSharp*" target="lib\net6.0" />
+    <file src="libraries\ILGLib.dll" target="lib\net6.0" />
+    <file src="libraries\MessagePack*" target="lib\net6.0" />
+    <file src="libraries\MemoryPack.*" target="lib\net6.0" />
+    <file src="libraries\Cinemachine.dll" target="lib\net6.0" />
   </files>
 </package>
