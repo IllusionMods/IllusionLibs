@@ -21,6 +21,9 @@ Every library ever needed for Illusion game modding, almost.
 5. Change "Package source" on right to "IllusionMods". You should now see all of the packages from this repository (and more).
 
 ## How to prevent dll files from these packages from being copied to the build output
+If you want to keep your build directory clean with only the plugin dlls being copied there, you can use one of the following methods to prevent dlls from nuget packages from being copied there.
+
+### By editing .csproj
 Open your project in VisualStudio or similar and find it in the Solution Explorer, then:
 
 - For old format .csproj files
@@ -35,6 +38,22 @@ Open your project in VisualStudio or similar and find it in the Solution Explore
     - In "Included Assets" type in "compile" and in "Private Assets" type in "All"
 
 Finally, manually delete the dlls from your build output. Now whenever you build your project the package dlls should no longer get copied to the build directory.
+
+### By using Directory.Build.props
+Add this section to Directory.Build.props. Warning: The SkipAllRefs target will prevent **all** package references from being copied. RemoveDepsJson target will remove the `*.deps.json` files from build output since they are not needed for BepInEx plugins.
+```xml
+<Project>
+	<Target Name="SkipAllRefs" AfterTargets="ResolveReferences">
+		<ItemGroup>
+			<ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" />
+		</ItemGroup>
+	</Target>
+
+	<Target Name="RemoveDepsJson" AfterTargets="PostBuildEvent">
+		<Delete Files="$(OutputPath)\$(MSBuildProjectName).deps.json" />
+	</Target>
+</Project>
+```
 
 ## How to update nuget packages in this repository
 This is necessary only if you want to update or add new dlls to this repository. To do that you will have to prepare the dlls and update nuspec files.
