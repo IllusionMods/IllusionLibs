@@ -6,6 +6,9 @@
     <description>Game code and critical dependencies</description>
     <authors>Illgames</authors>
     <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/Aicomi/icon.jpg</iconUrl>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="libraries\Assembly-CSharp*" target="lib\net6.0" />
