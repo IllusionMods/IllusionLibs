@@ -20,6 +20,22 @@ Every library ever needed for Illusion game modding, almost.
 4. Right click on your project and "Manage NuGet packages..."
 5. Change "Package source" on right to "IllusionMods". You should now see all of the packages from this repository (and more).
 
+## How to prevent dll files from these packages from being copied to the build output
+Open your project in VisualStudio or similar and find it in the Solution Explorer, then:
+
+- For old format .csproj files
+    - Expand References
+    - Select all of them (except for the Analyzers element if it exists)
+    - Go to the Properties window
+    - In "Copy Local" type in "False"
+- For new format .csproj files (sdk)
+    - Expand Dependencies\Packages
+    - Select all of the packages (except for analyzers if any)
+    - Go to the Properties window
+    - In "Included Assets" type in "compile" and in "Private Assets" type in "All"
+
+Finally, manually delete the dlls from your build output. Now whenever you build your project the package dlls should no longer get copied to the build directory.
+
 ## How to update nuget packages in this repository
 This is necessary only if you want to update or add new dlls to this repository. To do that you will have to prepare the dlls and update nuspec files.
 1. Clone the repo
