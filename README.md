@@ -57,9 +57,12 @@ Add this section to Directory.Build.props. Warning: The SkipAllRefs target will 
 
 ## How to update nuget packages in this repository
 This is necessary only if you want to update or add new dlls to this repository. To do that you will have to prepare the dlls and update nuspec files.
+
+> Note: Assemblies of games running on mono (from the managed folder) should be stripped and then publicized before being added. IL2CPP interop assemblies should only be stripped, not publicized (they are already publicized, only things hidden is IL2CPP piping).
+
 1. Clone the repo
-2. Use the included mono-cil-strip.exe to strip the new assemblies of their code and publicize them (make all members public for easier access, your project has to be set to unsafe for it to work, the packages all contain a script that sets this flag automatically when installed)
-   - `strip-folder.bat` is used by dragging a folder on it
+2. Use the included mono-cil-strip.exe to strip the new assemblies of their code and AssemblyPublicizer.exe to publicize them (make all members public for easier access, your project has to be set to unsafe for it to work, the packages all contain a script that sets this flag automatically when installed)
+   - `publicize-and-strip-folder.bat` and `strip-folder.bat` are used by dragging a folder on it
    - `strip-dlls-folder.sh` (Linux) is used by running it to strip contents of the dlls folder
    - `mono-cil-strip.exe` is used by dragging a file on it
 3. Replace the dll files you want to update with the new versions in the `packaging\GAME\libraries` folder
