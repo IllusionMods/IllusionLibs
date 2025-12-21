@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Game code and critical dependencies</description>
+    <authors>Illgames</authors>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\Assembly-CSharp*" target="lib\net6.0" />
+    <file src="libraries\IL.dll" target="lib\net6.0" />
+    <file src="libraries\ILGLib.dll" target="lib\net6.0" />
+    <file src="libraries\MessagePack*" target="lib\net6.0" />
+    <file src="libraries\MemoryPack.*" target="lib\net6.0" />
+  </files>
+</package>
