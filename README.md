@@ -12,6 +12,7 @@ Every library ever needed for Illusion game modding, almost.
         <add key="automatic" value="True" />
     </packageRestore>
     <packageSources>
+        <add key="BepInEx" value="https://nuget.bepinex.dev/v3/index.json" />
         <add key="IllusionMods" value="https://pkgs.dev.azure.com/IllusionMods/Nuget/_packaging/IllusionMods/nuget/v3/index.json" />
     </packageSources>
 </configuration>
