@@ -5,6 +5,7 @@
     <version>2.2.0.0</version>
     <description>Common utilities for Hooh plugins</description>
     <authors>Hooh</authors>
+    <projectUrl>https://github.com/HooahPlugins/HooahPlugins</projectUrl>
     <dependencies>
       <group targetFramework=".NETFramework4.6" />
     </dependencies>
