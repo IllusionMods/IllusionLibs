@@ -26,6 +26,7 @@
         <dependency id="IllusionLibs.AIGirl.UnityEngine.JSONSerializeModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.AIGirl.UnityEngine.PhysicsModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.AIGirl.UnityEngine.ScreenCaptureModule" version="$unityVersion$" />
+        <dependency id="IllusionLibs.AIGirl.UnityEngine.TerrainModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.AIGirl.UnityEngine.TextRenderingModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.AIGirl.UnityEngine.UI" version="$unityVersion$" />
         <dependency id="IllusionLibs.AIGirl.UnityEngine.UIModule" version="$unityVersion$" />
