@@ -4,7 +4,7 @@
     <id>$id$</id>
     <version>$unityVersion$</version>
     <description>Common utilities for Hooh plugins</description>
-    <authors>Hooh</authors>
+    <authors>Unity</authors>
     <dependencies>
       <group targetFramework=".NETFramework4.6" />
     </dependencies>
