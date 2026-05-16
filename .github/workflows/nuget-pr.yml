@@ -1,0 +1,44 @@
+name: Validate NuGet packaging (PR)
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup NuGet
+        uses: nuget/setup-nuget@v2
+
+      - name: Verify packaging script exists
+        shell: pwsh
+        run: |
+          if (-not (Test-Path -Path '.\\packaging\\pack.ps1' -PathType Leaf)) {
+            throw "Required packaging script not found: packaging/pack.ps1"
+          }
+
+      - name: NuGet pack
+        working-directory: .\\packaging
+        shell: pwsh
+        run: .\\pack.ps1
+
+      - name: Verify packages were created
+        shell: pwsh
+        run: |
+          $packages = Get-ChildItem -Path '.\\packaging' -Filter '*.nupkg' -File -Recurse |
+            Where-Object { $_.Name -notlike '*.symbols.nupkg' }
+
+          if ($packages.Count -eq 0) {
+            throw 'No .nupkg packages were produced by packaging/pack.ps1'
+          }
+
+          Write-Host "Produced $($packages.Count) package(s)."
