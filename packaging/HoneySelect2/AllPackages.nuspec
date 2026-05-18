@@ -24,6 +24,7 @@
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.ImageConversionModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.IMGUIModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.JSONSerializeModule" version="$unityVersion$" />
+        <dependency id="IllusionLibs.HoneySelect2.UnityEngine.ParticleSystemModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.PhysicsModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.ScreenCaptureModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.HoneySelect2.UnityEngine.TerrainModule" version="$unityVersion$" />
