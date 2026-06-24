@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$gameVersion$.1</version>
+    <version>$gameVersion$.2</version>
     <description>All packages required to compile a plugin, no need to install any of them manually</description>
     <authors>Illgames</authors>
     <dependencies>
@@ -23,7 +23,7 @@
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ScreenCaptureModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.Terrain" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.UI" version="$unityVersion$" />
-        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.779,)" />
+        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.784,)" />
       </group>
     </dependencies>
   </metadata>
