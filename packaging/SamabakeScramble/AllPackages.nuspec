@@ -2,10 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>$id$</id>
-    <version>$gameVersion$</version>
+    <version>$gameVersion$.1</version>
     <description>All packages required to compile a plugin, no need to install any of them manually</description>
     <authors>Illgames</authors>
-    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/SamabakeScramble/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="IllusionLibs.SamabakeScramble.Assembly-CSharp" version="$gameVersion$" />
@@ -19,12 +18,12 @@
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ClothModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ImageConversionModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine" version="$unityVersion$" />
+        <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ParticleSystemModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.PhysicsModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ScreenCaptureModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.Terrain" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.UI" version="$unityVersion$" />
-        <dependency id="BepInEx.KeyboardShortcut.IL2CPP" version="[18.3.0,)" />
-        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.738,)" />
+        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.779,)" />
       </group>
     </dependencies>
   </metadata>
