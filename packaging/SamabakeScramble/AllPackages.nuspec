@@ -5,10 +5,12 @@
     <version>$gameVersion$</version>
     <description>All packages required to compile a plugin, no need to install any of them manually</description>
     <authors>Illgames</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/SamabakeScramble/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0">
         <dependency id="IllusionLibs.SamabakeScramble.Assembly-CSharp" version="$gameVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.AstarPathfindingProject" version="$gameVersion$" />
+        <dependency id="IllusionLibs.SamabakeScramble.BehaviorDesigner" version="$gameVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.Il2Cppmscorlib" version="$gameVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.AIModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.AnimationModule" version="$unityVersion$" />

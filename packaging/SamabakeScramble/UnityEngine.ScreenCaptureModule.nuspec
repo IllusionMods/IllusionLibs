@@ -5,6 +5,7 @@
     <version>$unityVersion$</version>
     <description>Provides functionality to take screen shots using the ScreenCapture class</description>
     <authors>Unity</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/SamabakeScramble/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>

@@ -5,6 +5,7 @@
     <version>$gameVersion$</version>
     <description>Game code and critical dependencies</description>
     <authors>Illgames</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/SamabakeScramble/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0" >
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine" version="2021.3.33.1" />

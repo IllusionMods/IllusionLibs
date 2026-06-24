@@ -5,6 +5,7 @@
     <version>$unityVersion$</version>
     <description>Provides helper methods to convert images from and to PNG, JPEG or EXR formats</description>
     <authors>Unity</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/SamabakeScramble/icon.jpg</iconUrl>
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>
