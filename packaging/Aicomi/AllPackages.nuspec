@@ -12,8 +12,7 @@
         <dependency id="IllusionLibs.Aicomi.Il2CppSystem" version="$gameVersion$" />
         <dependency id="IllusionLibs.Aicomi.Unity" version="$gameVersion$" />
         <dependency id="IllusionLibs.Aicomi.UnityEngine" version="$unityVersion$" />
-        <dependency id="BepInEx.KeyboardShortcut.IL2CPP" version="[18.3.0,)" />
-        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.738,)" />
+        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.787,)" />
       </group>
     </dependencies>
   </metadata>

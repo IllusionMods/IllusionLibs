@@ -23,7 +23,7 @@
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.ScreenCaptureModule" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.Terrain" version="$unityVersion$" />
         <dependency id="IllusionLibs.SamabakeScramble.UnityEngine.UI" version="$unityVersion$" />
-        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.784,)" />
+        <dependency id="BepInEx.Unity.IL2CPP" version="[6.0.0-be.787,)" />
       </group>
     </dependencies>
   </metadata>
