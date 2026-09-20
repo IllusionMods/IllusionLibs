@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$gameVersion$</version>
+    <description>Optional libraries for various extra features</description>
+    <authors>Various</authors>
+    <iconUrl>https://raw.githubusercontent.com/IllusionMods/IllusionLibs/refs/heads/master/packaging/AmanatsuLocation/icon.jpg</iconUrl>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="libraries\BouncyCastle.Cryptography.dll" target="lib\net6.0" />
+    <file src="libraries\Coffee.*" target="lib\net6.0" />
+    <file src="libraries\Crest.*" target="lib\net6.0" />
+    <file src="libraries\EPO*" target="lib\net6.0" />
+    <file src="libraries\FinalIK.dll" target="lib\net6.0" />
+    <file src="libraries\FluidFlow.dll" target="lib\net6.0" />
+    <file src="libraries\ILGLib.dll" target="lib\net6.0" />
+    <file src="libraries\LitMotion.*" target="lib\net6.0" />
+    <file src="libraries\MagicaCloth*" target="lib\net6.0" />
+    <file src="libraries\Obi.dll" target="lib\net6.0" />
+    <file src="libraries\R3.*" target="lib\net6.0" />
+    <file src="libraries\RAM.dll" target="lib\net6.0" />
+    <file src="libraries\SimpleAnimationComponent.dll" target="lib\net6.0" />
+    <file src="libraries\Sirenix.OdinInspector.Modules.Unity.Addressables.dll" target="lib\net6.0" />
+    <file src="libraries\SplitScreenPro.dll" target="lib\net6.0" />
+    <file src="libraries\TriangleDotNet.dll" target="lib\net6.0" />
+    <file src="libraries\ZLinq.dll" target="lib\net6.0" />
+    <file src="libraries\ZString.dll" target="lib\net6.0" />
+  </files>
+</package>
