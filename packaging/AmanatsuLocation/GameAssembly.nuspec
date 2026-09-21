@@ -15,5 +15,7 @@
     <file src="libraries\ILGLib.dll" target="lib\net6.0" />
     <file src="libraries\MessagePack*" target="lib\net6.0" />
     <file src="libraries\MemoryPack.*" target="lib\net6.0" />
+    <file src="libraries\ZLinq.dll" target="lib\net6.0" />
+    <file src="libraries\ZString.dll" target="lib\net6.0" />
   </files>
 </package>

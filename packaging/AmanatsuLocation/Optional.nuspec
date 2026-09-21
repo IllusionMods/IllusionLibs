@@ -27,7 +27,5 @@
     <file src="libraries\Sirenix.OdinInspector.Modules.Unity.Addressables.dll" target="lib\net6.0" />
     <file src="libraries\SplitScreenPro.dll" target="lib\net6.0" />
     <file src="libraries\TriangleDotNet.dll" target="lib\net6.0" />
-    <file src="libraries\ZLinq.dll" target="lib\net6.0" />
-    <file src="libraries\ZString.dll" target="lib\net6.0" />
   </files>
 </package>
